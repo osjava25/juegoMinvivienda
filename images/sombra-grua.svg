@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 551.711 82.344" style="enable-background:new 0 0 551.711 82.344;" xml:space="preserve">
+<defs>
+	<filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="0" y="0" width="551.711" height="82.344">
+		<feFlood  style="flood-color:white;flood-opacity:1" result="back"/>
+		<feBlend  in="SourceGraphic" in2="back" mode="normal"/>
+	</filter>
+</defs>
+<mask maskUnits="userSpaceOnUse" x="0" y="0" width="551.711" height="82.344" id="SVGID_1_">
+	<g style="filter:url(#Adobe_OpacityMaskFilter);">
+		<defs>
+			<filter id="Adobe_OpacityMaskFilter_1_" filterUnits="userSpaceOnUse" x="0" y="0" width="551.711" height="82.344">
+				<feFlood  style="flood-color:white;flood-opacity:1" result="back"/>
+				<feBlend  in="SourceGraphic" in2="back" mode="normal"/>
+			</filter>
+		</defs>
+		<mask maskUnits="userSpaceOnUse" x="0" y="0" width="551.711" height="82.344" id="SVGID_1_">
+		</mask>
+		
+			<radialGradient id="SVGID_2_" cx="234.8101" cy="-293.4023" r="90.7032" gradientTransform="matrix(3.0413 0.004 -6.015486e-04 0.4539 -438.4485 173.4006)" gradientUnits="userSpaceOnUse">
+			<stop  offset="0.005" style="stop-color:#FFFFFF"/>
+			<stop  offset="1" style="stop-color:#000000"/>
+		</radialGradient>
+		<path style="mask:url(#SVGID_1_);fill:url(#SVGID_2_);" d="M551.711,41.538c-0.03,22.737-123.559,41.006-275.91,40.804
+			C123.45,82.14-0.03,63.544,0,40.807C0.03,18.069,123.559-0.2,275.91,0.002C428.261,0.204,551.741,18.8,551.711,41.538z"/>
+	</g>
+</mask>
+<g>
+	<defs>
+		<filter id="Adobe_OpacityMaskFilter_2_" filterUnits="userSpaceOnUse" x="0" y="0" width="551.711" height="82.344">
+			<feFlood  style="flood-color:white;flood-opacity:1" result="back"/>
+			<feBlend  in="SourceGraphic" in2="back" mode="normal"/>
+		</filter>
+	</defs>
+	<mask maskUnits="userSpaceOnUse" x="0" y="0" width="551.711" height="82.344" id="SVGID_3_">
+		<g style="filter:url(#Adobe_OpacityMaskFilter_2_);">
+			<defs>
+				<filter id="Adobe_OpacityMaskFilter_3_" filterUnits="userSpaceOnUse" x="0" y="0" width="551.711" height="82.344">
+					<feFlood  style="flood-color:white;flood-opacity:1" result="back"/>
+					<feBlend  in="SourceGraphic" in2="back" mode="normal"/>
+				</filter>
+			</defs>
+			<mask maskUnits="userSpaceOnUse" x="0" y="0" width="551.711" height="82.344" id="SVGID_3_">
+			</mask>
+			
+				<radialGradient id="SVGID_4_" cx="234.8101" cy="-293.4023" r="90.7032" gradientTransform="matrix(3.0413 0.004 -6.015486e-04 0.4539 -438.4485 173.4006)" gradientUnits="userSpaceOnUse">
+				<stop  offset="0.005" style="stop-color:#FFFFFF"/>
+				<stop  offset="1" style="stop-color:#000000"/>
+			</radialGradient>
+			<path style="mask:url(#SVGID_3_);fill:url(#SVGID_4_);" d="M551.711,41.538c-0.03,22.737-123.559,41.006-275.91,40.804
+				C123.45,82.14-0.03,63.544,0,40.807C0.03,18.069,123.559-0.2,275.91,0.002C428.261,0.204,551.741,18.8,551.711,41.538z"/>
+		</g>
+	</mask>
+	
+		<radialGradient id="SVGID_5_" cx="234.8101" cy="-293.4023" r="90.7032" gradientTransform="matrix(3.0413 0.004 -6.015486e-04 0.4539 -438.4485 173.4006)" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#000000"/>
+		<stop  offset="0.3726" style="stop-color:#020202;stop-opacity:0.6274"/>
+		<stop  offset="0.5069" style="stop-color:#090909;stop-opacity:0.4931"/>
+		<stop  offset="0.6026" style="stop-color:#141414;stop-opacity:0.3974"/>
+		<stop  offset="0.68" style="stop-color:#252525;stop-opacity:0.32"/>
+		<stop  offset="0.7463" style="stop-color:#3B3B3B;stop-opacity:0.2537"/>
+		<stop  offset="0.805" style="stop-color:#575757;stop-opacity:0.195"/>
+		<stop  offset="0.8581" style="stop-color:#777777;stop-opacity:0.1419"/>
+		<stop  offset="0.9069" style="stop-color:#9D9D9D;stop-opacity:0.0931"/>
+		<stop  offset="0.9523" style="stop-color:#C8C8C8;stop-opacity:0.0477"/>
+		<stop  offset="0.9926" style="stop-color:#F6F6F6;stop-opacity:0.0074"/>
+		<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
+	</radialGradient>
+	<path style="opacity:0.53;fill:url(#SVGID_5_);" d="M551.711,41.538c-0.03,22.737-123.559,41.006-275.91,40.804
+		C123.45,82.14-0.03,63.544,0,40.807C0.03,18.069,123.559-0.2,275.91,0.002C428.261,0.204,551.741,18.8,551.711,41.538z"/>
+</g>
+</svg>
