@@ -18,11 +18,13 @@ body { position: absolute; width: 100%; height: 100%; color: white;
 font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 -webkit-font-smoothing: antialiased; overflow-x: hidden; }
 .hidden{ display: none; }
-
+.col-3{ display: inline-block; width: 33%; float: left; padding: 0 15px; }
+.col-3 img{ width: 80%; }
 .controlHeader{ padding: 10px; height: 54px; position: absolute; top: 10px; left: 0; width: 100%; }
 .leftControlSup{ float: left; width: 40%; }
 .rightControlSup{ float:right; width: 40%; text-align: right; }
 .iconControlSup{ width: 33px; height: 33px; display: inline-block; cursor: hand; cursor: pointer;}
+.iconControlSupIzq{ width: auto; height: 33px; display: inline-block; cursor: hand; cursor: pointer;}
 .pasos{ background: url("../images/controlesSup/boton-1-submenu-pasos.svg") no-repeat;}
 .pausa{ background: url("../images/controlesSup/boton-2-submenu-pausa.svg") no-repeat;}
 .sonido{ background: url("../images/controlesSup/boton-3-submenu-sonido.svg") no-repeat;}
@@ -31,11 +33,18 @@ font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 .pausa:hover{ background: url("../images/controlesSup/boton-2-submenu-pausa-over.svg") no-repeat;}
 .sonido:hover{ background: url("../images/controlesSup/boton-3-submenu-sonido-over.svg") no-repeat;}
 .compartir:hover{ background: url("../images/controlesSup/boton-4-submenu-compartir-over.svg") no-repeat;}
+.tiempo{ background: url("../images/controlesSup/reloj-tiempo.svg") no-repeat; width: 100px; height: 40px;
+ line-height: 40px; color:#000; padding-left: 40px; font-family: 'Gloria Hallelujah', cursive; font-weight: 600;
+position: absolute; }
+.nivel1{ background: url("../images/controlesSup/nivel-1.svg") no-repeat center; width: 120px; height: 40px;
+position: absolute; left: 110px; top: 11px; }
 
 .controlFooter{ position: absolute; bottom: 20px; text-align: center; left: 0; width: 100%; }
 .controlFooter .btnJugar{ width: 200px; height: 60px; margin: 0 auto; }
-.scene1, .scene2, .scene3{ height: 100%; width: 100%; }
+.scene1, .scene2, .scene3, .scene4, .scenePasos, .scenePausa, .scene7{ height: 100%; width: 100%; }
 .bgSceneAzul{ height: 100%; width: 100%; background-image: url("../images/bg/fondo-azul.svg");
+background-size: cover; background-position-y: center; }
+.bgSceneVerde{ height: 100%; width: 100%; background-image: url("../images/bg/fondo-verde-avisos.svg");
 background-size: cover; background-position-y: center; }
 .bgDestelloAzul{ height: 100%; width: 100%; background-image: url("../images/bg/destellos.svg");
 background-size: cover; background-position-y: center; }
@@ -48,13 +57,26 @@ background-size: cover; background-position-y: center; }
 .contentScene1 .logoJuego img{ width: 100%; height:auto; max-width: 220px; margin-left: 140px; }
 .contentScene1 .logoJuego { position: absolute; top: 470px; z-index: 20; width:100%; text-align: center;
   vertical-align: middle; }
-
+.contentMarco b{ font-weight: 800; }
+.imgPasos img{ width: 30%; }
+.imgPasos .imgPaso3{ width: 20%; }
 .contentScene2,.contentScene3{ height: 80%; margin: 0 auto; display: table;}
+.contentScene7{ height: 80%; margin: 0 auto; display: table; width: 100%; max-width: 800px; }
 .bgMarco{ display: table-cell; text-align: center; width: 600px; height: 400px;
    background: url("../images/escena2/marco-texto.svg") no-repeat; background-size: contain;
    padding-top: 66px; background-position: center 60px; }
+.bgMarcoRegiones{ text-align: center; width:100%; max-width: 400px; display: inline-block;
+   background: url("../images/escena2/marco-texto.svg") no-repeat; background-size: contain;
+   background-position: center center; margin: 20% auto; height: 100%; max-height: 300px; float: left; }
+.mapaColombia{ width:100%; max-width: 300px; display: inline-block; margin: 20% auto; float: left; }
+.imgSelRegion{ width: 20%; display: inline-block; float: left; margin-right: 10px; }
 .titMarco{ font-size: 2.0em; font-family: 'Gloria Hallelujah', cursive; color: #fff; text-shadow: 2px 2px #000; }
 .contentMarco{ margin: 80px 60px; font-size: 1.8em; line-height: 1.4em; font-family: 'Gloria Hallelujah', cursive;
 color: #000; }
+.bgMarcoRegiones .contentMarco{ margin: 50px 50px; font-size: 1.6em; line-height: 1.4em; }
+.txtPasos{ font-size: 1.3em; line-height: 1.4em; font-weight: 600; }
 .personajeMarco { width: 200px; position: absolute; bottom: 0; margin-left: -100px; }
 .personajeMarco2 { width: 250px; position: absolute; bottom: 0; right: 0; }
+.flecha-siguiente{ width: 15%; position: relative; right: -30%; float: right; margin-top: -30%; }
+.flecha-anterior{ width: 15%; position: relative; left: -30%; float: left; margin-top: -30%; }
+.btn-cerrar{ width: 60px; display: inline-block; float: right; }

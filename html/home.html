@@ -12,7 +12,10 @@
 </head>
 <body>
 <div class="controlHeader">
-  <div class="leftControlSup"></div>
+  <div class="leftControlSup" id="inicioJuego">
+    <div class="iconControlSupIzq tiempo">10:00</div>
+    <div class="iconControlSupIzq nivel1"></div>
+  </div>
   <div class="rightControlSup">
     <div class="iconControlSup pasos"></div>
     <div class="iconControlSup pausa"></div>
@@ -20,6 +23,58 @@
     <div class="iconControlSup compartir"></div>
   </div>
 </div>
+
+<div class="scenePasos hidden" id="pasos">
+  <div class="bgSceneVerde">
+      <div class="contentScene2">
+        <div class="bgMarco">
+          <div class="btn-cerrar"><img src="../images/pasos/boton-cerrar.svg" /></div>
+          <div class="titMarco">Pasos</div>
+          <div class="contentMarco txtPasos">
+            1. Seleccionar una región de Colombia<br/>
+            2. Seleccionar un colombiano para entregar la casa<br/>
+            3. Diseñar la vivienda seleccionando las habitaciones, el techo, las ventanas, y el color de paredes<br/>
+            4. Agregar el servicio de luz<br/>
+            5. Agregar el servicio de agua potable<br/>
+            6. Agregar el servicio de alcantarillado
+          </div>
+          <div class="personajeMarco">
+            <img src="../images/pasos/personaje-guia-pasos.svg" />
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="scenePausa hidden" id="pausa">
+  <div class="bgSceneVerde">
+      <div class="contentScene2">
+        <div class="bgMarco">
+          <div class="btn-cerrar"><img src="../images/pasos/boton-cerrar.svg" /></div>
+          <div class="titMarco">Pausa</div>
+          <div class="contentMarco">
+            <div class="col-3">
+              <img src="../images/pausa/boton-seguir.svg" /><br/>
+              Seguir
+            </div>
+            <div class="col-3">
+              <img src="../images/pausa/boton-reiniciar.svg" /><br/>
+              Reiniciar
+            </div>
+            <div class="col-3">
+              <img src="../images/pausa/boton-salir.svg" /><br/>
+              Salir
+            </div>
+          </div>
+          <div class="personajeMarco">
+            <img src="../images/pausa/personaje-guia-pausa.svg" />
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+
 <div class="scene1 hidden" id="escena1">
 
 <div class="bgSceneAzul">
@@ -31,10 +86,10 @@
     </div>
   </div>
 </div>
-
-  <div class="controlFooter">
+<div class="controlFooter">
     <div class="btnJugar"><img src="../images/escena1/boton-jugar.svg" /></div>
   </div>
+
 </div>
 
 <div class="scene2 hidden" id="escena2">
@@ -58,7 +113,7 @@
   </div>
 </div>
 
-<div class="scene3" id="escena3">
+<div class="scene3 hidden" id="escena3">
   <div class="bgSceneAzul">
     <div class="bgDestelloAzul">
       <div class="contentScene3">
@@ -75,6 +130,195 @@
   </div>
   <div class="controlFooter">
     <div class="btnJugar" id="btnJugarPaso1"><img src="../images/escena3/boton-pasos.svg" /></div>
+  </div>
+</div>
+
+<div class="scene4 hidden" id="escena4A">
+  <div class="bgSceneAzul">
+    <div class="bgDestelloAzul">
+      <div class="contentScene3">
+        <div class="bgMarco">
+          <div class="titMarco">Paso 1</div>
+          <div class="contentMarco">
+            <div class="imgPasos">
+              <img src="../images/escena4/icono-paso-1.svg" class="img-responsive" />
+            </div>
+            <b>1. Seleccionar una región de Colombia</b>
+            <!--<div class="flecha-anterior">
+              <img src="../images/escena4/boton-left-slide-pasos.svg" />
+            </div>-->
+            <div class="flecha-siguiente">
+              <img src="../images/escena4/boton-right-slide-pasos-01.svg" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="controlFooter">
+    <div class="btnJugar"><img src="../images/escena2/boton-siguiente.svg" /></div>
+  </div>
+</div>
+
+<div class="scene4 hidden" id="escena4B">
+  <div class="bgSceneAzul">
+    <div class="bgDestelloAzul">
+      <div class="contentScene3">
+        <div class="bgMarco">
+          <div class="titMarco">Paso 2</div>
+          <div class="contentMarco">
+            <div class="imgPasos">
+              <img src="../images/escena4/icono-paso-2.svg" class="img-responsive" />
+            </div>
+            <b>2. Seleccionar un colombiano para entregar la casa</b>
+            <div class="flecha-anterior">
+              <img src="../images/escena4/boton-left-slide-pasos.svg" />
+            </div>
+            <div class="flecha-siguiente">
+              <img src="../images/escena4/boton-right-slide-pasos-01.svg" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="controlFooter">
+    <div class="btnJugar"><img src="../images/escena2/boton-siguiente.svg" /></div>
+  </div>
+</div>
+
+
+
+<div class="scene4 hidden" id="escena4C">
+  <div class="bgSceneAzul">
+    <div class="bgDestelloAzul">
+      <div class="contentScene3">
+        <div class="bgMarco">
+          <div class="titMarco">Paso 3</div>
+          <div class="contentMarco">
+            <div class="imgPasos">
+              <img src="../images/escena4/icono-paso-3.svg" class="imgPaso3" />
+            </div>
+            <b>3. Diseñar la vivienda seleccionando las habitaciones, el techo, las ventanas, y el color de paredes</b>
+            <div class="flecha-anterior">
+              <img src="../images/escena4/boton-left-slide-pasos.svg" />
+            </div>
+            <div class="flecha-siguiente">
+              <img src="../images/escena4/boton-right-slide-pasos-01.svg" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="controlFooter">
+    <div class="btnJugar"><img src="../images/escena2/boton-siguiente.svg" /></div>
+  </div>
+</div>
+
+<div class="scene4 hidden" id="escena4D">
+  <div class="bgSceneAzul">
+    <div class="bgDestelloAzul">
+      <div class="contentScene3">
+        <div class="bgMarco">
+          <div class="titMarco">Paso 4</div>
+          <div class="contentMarco">
+            <div class="imgPasos">
+              <img src="../images/escena4/icono-paso-4.svg" class="imgPaso3" />
+            </div>
+            <b>4. Agregar el servicio de luz</b>
+            <div class="flecha-anterior">
+              <img src="../images/escena4/boton-left-slide-pasos.svg" />
+            </div>
+            <div class="flecha-siguiente">
+              <img src="../images/escena4/boton-right-slide-pasos-01.svg" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="controlFooter">
+    <div class="btnJugar"><img src="../images/escena2/boton-siguiente.svg" /></div>
+  </div>
+</div>
+
+<div class="scene4 hidden" id="escena4E">
+  <div class="bgSceneAzul">
+    <div class="bgDestelloAzul">
+      <div class="contentScene3">
+        <div class="bgMarco">
+          <div class="titMarco">Paso 5</div>
+          <div class="contentMarco">
+            <div class="imgPasos">
+              <img src="../images/escena4/icono-paso-5.svg" class="imgPaso3" />
+            </div>
+            <b>5. Agregar el servicio de agua potable</b>
+            <div class="flecha-anterior">
+              <img src="../images/escena4/boton-left-slide-pasos.svg" />
+            </div>
+            <div class="flecha-siguiente">
+              <img src="../images/escena4/boton-right-slide-pasos-01.svg" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="controlFooter">
+    <div class="btnJugar"><img src="../images/escena2/boton-siguiente.svg" /></div>
+  </div>
+</div>
+
+<div class="scene4 hidden" id="escena4F">
+  <div class="bgSceneAzul">
+    <div class="bgDestelloAzul">
+      <div class="contentScene3">
+        <div class="bgMarco">
+          <div class="titMarco">Paso 6</div>
+          <div class="contentMarco">
+            <div class="imgPasos">
+              <img src="../images/escena4/icono-paso-6.svg" />
+            </div>
+            <b>6. Agregar el servicio de alcantarillado</b>
+            <div class="flecha-anterior">
+              <img src="../images/escena4/boton-left-slide-pasos.svg" />
+            </div>
+            <!--<div class="flecha-siguiente">
+              <img src="../images/escena4/boton-right-slide-pasos-01.svg" />
+            </div>-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="controlFooter">
+    <div class="btnJugar"><img src="../images/escena2/boton-siguiente.svg" /></div>
+  </div>
+</div>
+
+
+<div class="scene7" id="escena7">
+  <div class="bgSceneAzul">
+    <div class="bgDestelloAzul">
+      <div class="contentScene7">
+        <div class="mapaColombia">
+          <img src="../images/escena7/mapa-colombia.svg" />
+        </div>
+        <div class="bgMarcoRegiones">
+          <div class="titMarco">Regiones</div>
+          <div class="contentMarco">
+            <div class="imgSelRegion">
+              <img src="../images/escena7/icono-mano-regiones.svg" />
+            </div>
+            <b>Por favor selecciona una de las regiones de Colombia!</b>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="controlFooter">
+    <div class="btnJugar"><img src="../images/escena7/boton-confirmar.svg" /></div>
   </div>
 </div>
 
