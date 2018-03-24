@@ -24,7 +24,7 @@ font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 .leftControlSup{ float: left; width: 40%; }
 .rightControlSup{ float:right; width: 40%; text-align: right; }
 .iconControlSup{ width: 33px; height: 33px; display: inline-block; cursor: hand; cursor: pointer;}
-.iconControlSupIzq{ width: auto; height: 33px; display: inline-block; cursor: hand; cursor: pointer;}
+.iconControlSupIzq{ width: auto; height: 33px; display: inline-block; cursor: hand; cursor: pointer; float: left;}
 .pasos{ background: url("../images/controlesSup/boton-1-submenu-pasos.svg") no-repeat;}
 .pausa{ background: url("../images/controlesSup/boton-2-submenu-pausa.svg") no-repeat;}
 .sonido{ background: url("../images/controlesSup/boton-3-submenu-sonido.svg") no-repeat;}
@@ -34,16 +34,33 @@ font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 .sonido:hover{ background: url("../images/controlesSup/boton-3-submenu-sonido-over.svg") no-repeat;}
 .compartir:hover{ background: url("../images/controlesSup/boton-4-submenu-compartir-over.svg") no-repeat;}
 .tiempo{ background: url("../images/controlesSup/reloj-tiempo.svg") no-repeat; width: 100px; height: 40px;
- line-height: 40px; color:#000; padding-left: 40px; font-family: 'Gloria Hallelujah', cursive; font-weight: 600;
-position: absolute; }
+ line-height: 40px; color:#000; padding-left: 40px; font-family: 'Gloria Hallelujah', cursive; font-weight: 600; }
 .nivel1{ background: url("../images/controlesSup/nivel-1.svg") no-repeat center; width: 120px; height: 40px;
-position: absolute; left: 110px; top: 11px; }
+margin-top: 1px; margin-right: 20px; }
+.nivel2{ background: url("../images/controlesSup/nivel-2.svg") no-repeat center; width: 120px; height: 40px;
+margin-top: 1px; margin-right: 20px;}
+.nivel3{ background: url("../images/controlesSup/nivel-3.svg") no-repeat center; width: 120px; height: 40px;
+margin-top: 1px; margin-right: 20px;}
+.nivel4{ background: url("../images/controlesSup/nivel-4.svg") no-repeat center; width: 120px; height: 40px;
+margin-top: 1px; margin-right: 20px;}
+.nivel5{ background: url("../images/controlesSup/nivel-5.svg") no-repeat center; width: 120px; height: 40px;
+margin-top: 1px; margin-right: 20px;}
+.nivel6{ background: url("../images/controlesSup/nivel-6.svg") no-repeat center; width: 120px; height: 40px;
+margin-top: 1px; margin-right: 20px;}
+
+.regionAmazonia{ background: url("../images/controlesSup/mapa-colombia-region-amazonia.svg") no-repeat; }
+.regionAndina{ background: url("../images/controlesSup/mapa-colombia-region-andina.svg") no-repeat; }
+.regionCaribe{ background: url("../images/controlesSup/mapa-colombia-region-caribe.svg") no-repeat; }
+.regionOrinoquia{ background: url("../images/controlesSup/mapa-colombia-region-orinoquia.svg") no-repeat; }
+.regionPacifica{ background: url("../images/controlesSup/mapa-colombia-region-pacifica.svg") no-repeat; }
+.iconRegion{width: 180px; height: 54px; margin-top: -9px; line-height: 54px; padding-left: 40px; color: #000;
+font-family: 'Gloria Hallelujah', cursive; font-weight: 600; font-size: 0.8em;}
 
 .controlFooter{ position: absolute; bottom: 20px; text-align: center; left: 0; width: 100%; }
 .controlFooter .btnJugar{ width: 200px; height: 60px; margin: 0 auto; }
 .controlFooter .btnJugar2{ width: 300px; height: 80px; margin: 0 auto; }
-.scene1, .scene2, .scene3, .scene4, .scenePasos, .scenePausa, .scene7, .scene8, .scene9, .scene10
-{ height: 100%; width: 100%; }
+.scene1, .scene2, .scene3, .scene4, .scenePasos, .scenePausa, .scene7, .scene8, .scene9, .scene10,
+.scene11{ height: 100%; width: 100%; }
 .bgSceneAzul{ height: 100%; width: 100%; background-image: url("../images/bg/fondo-azul.svg");
 background-size: cover; background-position-y: center; }
 .bgSceneVerde{ height: 100%; width: 100%; background-image: url("../images/bg/fondo-verde-avisos.svg");
@@ -77,7 +94,8 @@ background-repeat: no-repeat; }
  .bgMarcoColombiano{ text-align: center; max-width: 500px; display: inline-block;
     background: url("../images/escena2/marco-texto.svg") no-repeat; background-size: contain;
     background-position: center center; margin: 10% 20%; height: 100%; max-height: 300px; float: left; }
-.mapaColombia{ width:100%; max-width: 300px; display: inline-block; margin: 15% auto; float: left; max-height: 300px; }
+.mapaColombia{ width:100%; max-width: 300px; display: inline-block; margin: 15% auto; float: left;
+  max-height: 300px; }
 .personajeColombia{ width:100%; max-width: 200px; display: inline-block; margin: 15% auto; float: left;
   max-height: 200px; }
 .imgSelRegion{ width: 20%; display: inline-block; float: left; margin-right: 10px; }
@@ -110,3 +128,60 @@ color: #000; }
 .colombianoRolo{ background: url("../images/escena9/colombiano-rolo-01.svg") no-repeat; }
 .colombianoRolo:hover{ background: url("../images/escena9/colombiano-rolo-over-01.svg") no-repeat; }
 .imgColombiano{ max-width: 200px;  width: 100%; height: 200px; max-height: 200px; cursor: hand; cursor: pointer; }
+.bgSceneAndina{ background: url("../images/escena11/andina/region-andina-fondo-cielo.svg"); height: 100%;
+width: 100%; background-size: cover; }
+.nubesAndina{ background: url("../images/escena11/andina/region-andina-nubes.svg"); height: 100%;
+width: 100%; background-size: cover; }
+.montanasAndina{ background: url("../images/escena11/andina/region-andina-montanas-vegetacion.svg"); height: 100%;
+width: 100%; background-size: cover; }
+.solAndina{ background: url("../images/escena11/andina/region-andina-sol.svg"); height: 100px; width: 100px;
+background-size: cover; float: right; margin-right: 15%; }
+
+.bgSceneAmazonia{ background: url("../images/escena11/amazonia/region-amazonia-fondo-cielo.svg"); height: 100%;
+width: 100%; background-size: cover; }
+.nubesAmazonia{ background: url("../images/escena11/amazonia/region-amazonia-nubes.svg"); height: 100%;
+width: 100%; }
+.montanasAmazonia{ background: url("../images/escena11/amazonia/region-amazonia-montanas-vegetacion.svg");
+height: 100%; width: 100%; background-size: cover; }
+.solAmazonia{ background: url("../images/escena11/amazonia/region-amazonia-sol.svg"); height: 100px; width: 100px;
+background-size: cover; float: right; margin-right: 15%; }
+.aveAmazonia{ background: url("../images/escena11/amazonia/region-amazonia-ave.svg") no-repeat; height: 100px;
+width: 100px; float: left; margin-left: 35%; margin-top: 5%; }
+
+
+.bgSceneCaribe{ background: url("../images/escena11/caribe/region-caribe-fondo-cielo.svg"); height: 100%;
+width: 100%; background-size: cover; }
+.nubesCaribe{ background: url("../images/escena11/caribe/region-caribe-nubes.svg"); height: 100%;
+width: 100%; }
+.montanasCaribe{ background: url("../images/escena11/caribe/region-caribe-montanas-vegetacion.svg"); height: 100%;
+width: 100%; background-size: cover; }
+.solCaribe{ background: url("../images/escena11/caribe/region-caribe-sol.svg"); height: 200px; width: 200px;
+background-size: cover; float: left; margin-left: 10%; }
+.aveCaribe{ background: url("../images/escena11/caribe/region-caribe-aves.svg") no-repeat; height: 300px;
+width: 300px; float: left; margin-left: 5%; margin-top: 5%; }
+
+.bgSceneOrinoquia{ background: url("../images/escena11/orinoquia/region-orinoquia-fondo-cielo.svg"); height: 100%;
+width: 100%; background-size: cover; }
+.nubesOrinoquia{ background: url("../images/escena11/orinoquia/region-orinoquia-nubes.svg"); height: 100%;
+width: 100%; }
+.montanasOrinoquia{ background: url("../images/escena11/orinoquia/region-orinoquia-montanas-vegetacion.svg")
+no-repeat; height: 100%; width: 100%; background-size: cover; background-position-y: 80px; }
+.solOrinoquia{ background: url("../images/escena11/orinoquia/region-orinoquia-sol.svg"); height: 100px; width: 100px;
+background-size: cover; float: left; margin-left: 10%; }
+.aveOrinoquia{ background: url("../images/escena11/orinoquia/region-orinoquia-aves.svg") no-repeat; height: 150px;
+width: 150px; float: left; margin-left: 20%; margin-top: 5%; }
+
+.bgScenePacifica{ background: url("../images/escena11/pacifica/region-pacifica-fondo-cielo.svg"); height: 100%;
+width: 100%; background-size: cover; }
+.nubesPacifica{ background: url("../images/escena11/pacifica/region-pacifica-nubes.svg"); height: 100%;
+width: 100%; }
+.montanasPacifica{ background: url("../images/escena11/pacifica/region-pacifica-montanas-vegetacion.svg")
+no-repeat; height: 100%; width: 100%; background-size: cover; background-position-y: 80px; }
+.solPacifica{ background: url("../images/escena11/pacifica/region-pacifica-sol.svg"); height: 100px; width: 100px;
+background-size: cover; float: left; margin-left: 10%; margin-top: 5%; }
+.avePacifica{ background: url("../images/escena11/pacifica/region-pacifica-aves.svg") no-repeat; height: 250px;
+width: 250px; float: left; margin-left: 10%; margin-top: 5%; }
+.barcoPacifica{ background: url("../images/escena11/pacifica/region-pacifica-barco-grua.svg") no-repeat; height: 150px;
+width: 150px; float: left; margin-left: -15%; margin-top: 23%; }
+.buquePacifica{ background: url("../images/escena11/pacifica/region-pacifica-buque.svg") no-repeat; height: 200px;
+width: 200px; float: left; margin-left: -25%; margin-top: 25%; }
