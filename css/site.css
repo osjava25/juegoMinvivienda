@@ -181,7 +181,98 @@ no-repeat; height: 100%; width: 100%; background-size: cover; background-positio
 background-size: cover; float: left; margin-left: 10%; margin-top: 5%; }
 .avePacifica{ background: url("../images/escena11/pacifica/region-pacifica-aves.svg") no-repeat; height: 250px;
 width: 250px; float: left; margin-left: 10%; margin-top: 5%; }
-.barcoPacifica{ background: url("../images/escena11/pacifica/region-pacifica-barco-grua.svg") no-repeat; height: 150px;
-width: 150px; float: left; margin-left: -15%; margin-top: 23%; }
+.barcoPacifica{ background: url("../images/escena11/pacifica/region-pacifica-barco-grua.svg") no-repeat;
+height: 150px; width: 150px; float: left; margin-left: -15%; margin-top: 23%; }
 .buquePacifica{ background: url("../images/escena11/pacifica/region-pacifica-buque.svg") no-repeat; height: 200px;
 width: 200px; float: left; margin-left: -25%; margin-top: 25%; }
+.menuLateral{ position: absolute; width: 60px; left:10px; top: 90px; }
+.menuLateral > div{ margin-bottom: 10px; }
+.iconHabitacion{ width: 60px; height: 60px;
+background: url("../images/escena11/menu/menu-principal-1-habitaciones.svg") no-repeat;}
+.iconHabitacion:hover{ width: 60px; height: 60px;
+background: url("../images/escena11/menu/menu-principal-1-habitaciones-over.svg") no-repeat;}
+.iconHabitacion:hover > .menuHabitacion{ display: block;}
+.iconParedes{ width: 60px; height: 60px;
+background: url("../images/escena11/menu/menu-principal-2-color-paredes.svg") no-repeat;}
+.iconParedes:hover{ width: 60px; height: 60px;
+background: url("../images/escena11/menu/menu-principal-2-color-paredes-over.svg") no-repeat;}
+.iconParedes:hover > .menuParedes{ display: block;}
+.iconVentanas{ width: 60px; height: 60px;
+background: url("../images/escena11/menu/menu-principal-3-ventanas.svg") no-repeat;}
+.iconVentanas:hover{ width: 60px; height: 60px;
+background: url("../images/escena11/menu/menu-principal-3-ventanas-over.svg") no-repeat;}
+.iconVentanas:hover > .menuVentanas{ display: block;}
+.iconTechos{ width: 60px; height: 60px;
+background: url("../images/escena11/menu/menu-principal-4-techos.svg") no-repeat;}
+.iconTechos:hover{ width: 60px; height: 60px;
+background: url("../images/escena11/menu/menu-principal-4-techos-over.svg") no-repeat;}
+.iconTechos:hover > .menuTechos{ display: block;}
+.iconServicios{ width: 60px; height: 60px;
+background: url("../images/escena11/menu/menu-principal-5-servicios-publicos.svg") no-repeat;}
+.iconServicios:hover{ width: 60px; height: 60px;
+background: url("../images/escena11/menu/menu-principal-5-servicios-publicos-over.svg") no-repeat;}
+.iconServicios:hover > .menuServicios{ display: block;}
+.menuHabitacion{ height: 90px; width: 300px; position: absolute; left: 60px; top: -30px; display: none;
+background: url("../images/escena11/menu/menu-principal-contenedor-1-habitaciones.svg") no-repeat; }
+.btnHabitacion{ height: 40px; width: 40px; display: inline-block; margin: 35px 0 0 10px;
+background: url("../images/escena11/menu/menu-principal-1-habitaciones-1-habitacion.svg") no-repeat; }
+.btnBano{ height: 40px; width: 40px; display: inline-block; margin: 35px 0 0 10px;
+background: url("../images/escena11/menu/menu-principal-1-habitaciones-2-bano.svg") no-repeat; }
+.btnSala{ height: 40px; width: 40px; display: inline-block; margin: 35px 0 0 10px;
+background: url("../images/escena11/menu/menu-principal-1-habitaciones-3-sala.svg") no-repeat; }
+.btnCocina{ height: 40px; width: 40px; display: inline-block; margin: 35px 0 0 10px;
+background: url("../images/escena11/menu/menu-principal-1-habitaciones-4-cocina.svg") no-repeat; }
+.menuParedes{ height: 90px; width: 300px; position: absolute; left: 60px; top: 40px; display: none;
+background: url("../images/escena11/menu/menu-principal-contenedor-2-color-paredes.svg") no-repeat; }
+.btnColorVerde{ height: 40px; width: 40px; display: inline-block; margin: 35px 0 0 20px;
+background: url("../images/escena11/menu/menu-principal-2-color-paredes-1-verde.svg") no-repeat; }
+.btnColorAzul{ height: 40px; width: 40px; display: inline-block; margin: 35px 0 0 20px;
+background: url("../images/escena11/menu/menu-principal-2-color-paredes-2-azul.svg") no-repeat; }
+.btnColorRosado{ height: 40px; width: 40px; display: inline-block; margin: 35px 0 0 20px;
+background: url("../images/escena11/menu/menu-principal-2-color-paredes-3-rosado.svg") no-repeat; }
+.menuVentanas{ height: 90px; width: 300px; position: absolute; left: 60px; top: 110px; display: none;
+background: url("../images/escena11/menu/menu-principal-contenedor-3-ventanas.svg") no-repeat; }
+.btnVentana1{ height: 40px; width: 40px; display: inline-block; margin: 35px 0 0 20px;
+background: url("../images/escena11/menu/menu-principal-3-ventanas-1-ventana.svg") no-repeat; }
+.btnVentana2{ height: 40px; width: 40px; display: inline-block; margin: 35px 0 0 20px;
+background: url("../images/escena11/menu/menu-principal-3-ventanas-2-ventana.svg") no-repeat; }
+.btnVentana3{ height: 40px; width: 40px; display: inline-block; margin: 35px 0 0 20px;
+background: url("../images/escena11/menu/menu-principal-3-ventanas-3-ventana.svg") no-repeat; }
+.menuTechos{ height: 90px; width: 300px; position: absolute; left: 60px; top: 180px; display: none;
+background: url("../images/escena11/menu/menu-principal-contenedor-4-techos.svg") no-repeat; }
+.btnTecho1{ height: 40px; width: 40px; display: inline-block; margin: 35px 0 0 20px;
+background: url("../images/escena11/menu/menu-principal-4-techos-1-techo.svg") no-repeat; }
+.btnTecho2{ height: 40px; width: 40px; display: inline-block; margin: 35px 0 0 20px;
+background: url("../images/escena11/menu/menu-principal-4-techos-2-techo.svg") no-repeat; }
+.btnTecho3{ height: 40px; width: 40px; display: inline-block; margin: 35px 0 0 20px;
+background: url("../images/escena11/menu/menu-principal-4-techos-3-techo.svg") no-repeat; }
+.menuServicios{ height: 90px; width: 300px; position: absolute; left: 60px; top: 250px; display: none;
+background: url("../images/escena11/menu/menu-principal-contenedor-5-servicios.svg") no-repeat; }
+.btnServicio1{ height: 40px; width: 40px; display: inline-block; margin: 35px 0 0 20px;
+background: url("../images/escena11/menu/menu-principal-5-servicios-publicos-1-luz.svg") no-repeat; }
+.btnServicio2{ height: 40px; width: 40px; display: inline-block; margin: 35px 0 0 20px;
+background: url("../images/escena11/menu/menu-principal-5-servicios-publicos-2-agua.svg") no-repeat; }
+.btnServicio3{ height: 40px; width: 40px; display: inline-block; margin: 35px 0 0 20px;
+background: url("../images/escena11/menu/menu-principal-5-servicios-publicos-2-alcantarillado.svg") no-repeat; }
+
+.bgCasa{ background: url("../images/casa/habitacion/casa-habitaciones-marca-de-agua.svg") no-repeat; width: 100%;
+height: 100%; max-width: 600px; max-height: 600px; position: absolute; right: 50px; top: 50px; }
+.techoCasa{ width: 100%; height: 100%; max-width: 600px; max-height: 600px; position: absolute; right: 50px;
+top: 50px; z-index: 6; }
+.techo1{ background: url("../images/casa/techo/techo-1.svg") no-repeat; }
+.techo2{ background: url("../images/casa/techo/techo-2.svg") no-repeat; }
+.techo3{ background: url("../images/casa/techo/techo-3.svg") no-repeat; }
+.habitacionCasa1{ width: 100%; height: 100%; max-width: 310px; max-height: 300px; position: absolute; z-index: 5;
+right: 302px; top: 211px; background: url("../images/casa/habitacion/habitacion-1-habitacion.svg") no-repeat; }
+.habitacionCasa2{ width: 100%; height: 100%; max-width: 233px; max-height: 300px; position: absolute; z-index: 5;
+right: 89px; top: 211px; background: url("../images/casa/habitacion/habitacion-2-bano.svg") no-repeat; }
+.habitacionCasa3{ width: 100%; height: 100%; max-width: 282px; max-height: 300px; position: absolute; z-index: 5;
+right: 329px; top: 343px; background: url("../images/casa/habitacion/habitacion-3-sala.svg") no-repeat; }
+.habitacionCasa4{ width: 100%; height: 100%; max-width: 262px; max-height: 300px; position: absolute; z-index: 5;
+right: 89px; top: 343px; background: url("../images/casa/habitacion/habitacion-4-cocina.svg") no-repeat; }
+.habitacionCasa1Azul{ width: 100%; height: 100%; max-width: 310px; max-height: 300px; position: absolute; z-index: 5;
+right: 302px; top: 211px; background: url("../images/casa/habitacion/habitacion-1-habitacionAzul.svg") no-repeat; }
+.habitacionCasa1Rosado{ width: 100%; height: 100%; max-width: 310px; max-height: 300px; position: absolute; z-index: 5;
+right: 302px; top: 211px; background: url("../images/casa/habitacion/habitacion-1-habitacionRosado.svg") no-repeat; }
+.habitacionCasa1Verde{ width: 100%; height: 100%; max-width: 310px; max-height: 300px; position: absolute; z-index: 5;
+right: 302px; top: 211px; background: url("../images/casa/habitacion/habitacion-1-habitacionVerde.svg") no-repeat; }
