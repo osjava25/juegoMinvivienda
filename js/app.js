@@ -168,7 +168,10 @@ function fordward()
 			break;			
         case "9":
 			currentScene="10";
-			break;				
+			break;
+        case "9":
+			currentScene="11";
+			break;			
 	}
 	alternateScene(currentScene);
 	intro2('.btnJugar')
@@ -213,6 +216,12 @@ function backward()
 			break;			
         case "9":
 			currentScene="8";
+			break;	
+        case "10":
+			currentScene="9";
+			break;	
+        case "9":
+			currentScene="8";
 			break;				
 	}
 	alternateScene(currentScene);
@@ -241,6 +250,12 @@ function alternateScene(sceneNumber)
 	$("#escena8").hide();
 	$("#escena9").hide();
 	$("#escena10").hide();
+	$("#regionAndina").hide();
+	$("#casa").hide();
+	$("#menuLateral").hide();
+	$("#regionAmazonia").hide();
+	$("#regionCaribe").hide();
+	$("#regionOrinoquia").hide();
 	$("#pausa").hide();
 	$("#escena"+sceneNumber).show();
 }
@@ -262,6 +277,12 @@ function showScene(scene)
 	$("#escena9").hide();
 	$("#pausa").hide();
 	$("#escena10").hide();
+		$("#regionAndina").hide();
+		$("#casa").hide();
+	$("#menuLateral").hide();
+	$("#regionAmazonia").hide();
+	$("#regionCaribe").hide();
+	$("#regionOrinoquia").hide();
 	$("#"+scene).show();
 }
 
