@@ -6,7 +6,7 @@ $( document ).ready(function() {
 	initialize();
 	alternateScene(currentScene);
 	intro('.btnJugar')
-   
+
 });
 
 function intro(elemento)
@@ -29,7 +29,7 @@ function intro(elemento)
 		elasticity: 600,
 		easing: 'easeOutElastic'
 	  });
-	
+
 	var logoTimeline = anime.timeline();
 	logoTimeline
 	.add({
@@ -63,7 +63,7 @@ function intro2(elemento)
 		elasticity: 600,
 		easing: 'easeOutElastic'
 	  });
-	
+
 	var logoTimeline = anime.timeline();
 	logoTimeline
 	.add({
@@ -83,7 +83,7 @@ function move(elemento, distancex, distancey)
 	  targets: elemento,
 	  translateX: distancex,
 	  translateY: distancey
-	});	
+	});
 }
 
 function initialize()
@@ -91,37 +91,37 @@ function initialize()
 	$('[class^="btnJugar"]').click(function(){
 		btnJugarClick();
 	})
-	
+
 	$('.flecha-anterior').click(function(){
 		backward();
 	})
-	
+
 	$('.flecha-siguiente').click(function(){
 		fordward();
 	})
-		
+
 	$('.pausa').click(function(){
 		pause();
 	})
-	
+
 	$('.pasos').click(function(){
 		currentScene="1";
 		alternateScene(currentScene);
 	})
-	
+
 	$('#seguir').click(function(){
 		alternateScene(currentScene);
 	})
-	
+
 	$('#reiniciar').click(function(){
 		currentScene="1";
 		alternateScene(currentScene);
 	})
-	
+
 	$('#salir').click(function(){
 		closeWindow();
 	})
-	
+
 }
 
 function pause()
@@ -144,7 +144,7 @@ function fordward()
 			break;
 		case "4A":
 			currentScene="4B";
-			break;	
+			break;
         case "4B":
 			currentScene="4C";
 			break;
@@ -152,26 +152,23 @@ function fordward()
 			currentScene="4D";
 			break;
         case "4D":
-			currentScene="5";
-			break;
-        case "5":
-			currentScene="6";
-			break;	
-        case "6":
+		 currentScene="4E";
+		 break;
+	        case "4E":
 			currentScene="7";
-			break;	
+			break;
         case "7":
 			currentScene="8";
-			break;		
+			break;
         case "8":
 			currentScene="9";
-			break;			
+			break;
         case "9":
 			currentScene="10";
 			break;
         case "9":
 			currentScene="11";
-			break;			
+			break;
 	}
 	alternateScene(currentScene);
 	intro2('.btnJugar')
@@ -192,7 +189,7 @@ function backward()
 			break;
 		case "4A":
 			currentScene="3";
-			break;	
+			break;
         case "4B":
 			currentScene="4A";
 			break;
@@ -202,27 +199,24 @@ function backward()
         case "4D":
 			currentScene="4C";
 			break;
-        case "5":
-			currentScene="4";
-			break;	
-        case "6":
-			currentScene="5";
-			break;	
+        case "4E":
+			currentScene="4D";
+			break;
         case "7":
-			currentScene="6";
-			break;		
+			currentScene="4E";
+			break;
         case "8":
 			currentScene="7";
-			break;			
+			break;
         case "9":
 			currentScene="8";
-			break;	
+			break;
         case "10":
 			currentScene="9";
-			break;	
+			break;
         case "9":
 			currentScene="8";
-			break;				
+			break;
 	}
 	alternateScene(currentScene);
 	intro2('.btnJugar')
@@ -230,7 +224,7 @@ function backward()
 
 function btnJugarClick()
 {
-	
+
 	fordward();
 }
 
@@ -244,8 +238,6 @@ function alternateScene(sceneNumber)
 	$("#escena4C").hide();
 	$("#escena4D").hide();
 	$("#escena4E").hide();
-	$("#escena5").hide();
-	$("#escena6").hide();
 	$("#escena7").hide();
 	$("#escena8").hide();
 	$("#escena9").hide();
@@ -256,6 +248,7 @@ function alternateScene(sceneNumber)
 	$("#regionAmazonia").hide();
 	$("#regionCaribe").hide();
 	$("#regionOrinoquia").hide();
+	$("#regionPacifica").hide();
 	$("#pausa").hide();
 	$("#escena"+sceneNumber).show();
 }
@@ -270,8 +263,6 @@ function showScene(scene)
 	$("#escena4C").hide();
 	$("#escena4D").hide();
 	$("#escena4E").hide();
-	$("#escena5").hide();
-	$("#escena6").hide();
 	$("#escena7").hide();
 	$("#escena8").hide();
 	$("#escena9").hide();
@@ -283,6 +274,7 @@ function showScene(scene)
 	$("#regionAmazonia").hide();
 	$("#regionCaribe").hide();
 	$("#regionOrinoquia").hide();
+	$("#regionPacifica").hide();
 	$("#"+scene).show();
 }
 

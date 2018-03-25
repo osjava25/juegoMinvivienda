@@ -276,3 +276,21 @@ right: 302px; top: 211px; background: url("../images/casa/habitacion/habitacion-
 right: 302px; top: 211px; background: url("../images/casa/habitacion/habitacion-1-habitacionRosado.svg") no-repeat; }
 .habitacionCasa1Verde{ width: 100%; height: 100%; max-width: 310px; max-height: 300px; position: absolute; z-index: 5;
 right: 302px; top: 211px; background: url("../images/casa/habitacion/habitacion-1-habitacionVerde.svg") no-repeat; }
+.habitacionCasa2Azul{ width: 100%; height: 100%; max-width: 233px; max-height: 300px; position: absolute; z-index: 5;
+right: 89px; top: 211px; background: url("../images/casa/habitacion/habitacion-2-banoAzul.svg") no-repeat; }
+.habitacionCasa2Verde{ width: 100%; height: 100%; max-width: 233px; max-height: 300px; position: absolute; z-index: 5;
+right: 89px; top: 211px; background: url("../images/casa/habitacion/habitacion-2-banoVerde.svg") no-repeat; }
+.habitacionCasa2Rosado{ width: 100%; height: 100%; max-width: 233px; max-height: 300px; position: absolute; z-index: 5;
+right: 89px; top: 211px; background: url("../images/casa/habitacion/habitacion-2-banoRosado.svg") no-repeat; }
+.habitacionCasa3Azul{ width: 100%; height: 100%; max-width: 282px; max-height: 300px; position: absolute; z-index: 5;
+right: 329px; top: 343px; background: url("../images/casa/habitacion/habitacion-3-salaAzul.svg") no-repeat; }
+.habitacionCasa3Verde{ width: 100%; height: 100%; max-width: 282px; max-height: 300px; position: absolute; z-index: 5;
+right: 329px; top: 343px; background: url("../images/casa/habitacion/habitacion-3-salaVerde.svg") no-repeat; }
+.habitacionCasa3Rosado{ width: 100%; height: 100%; max-width: 282px; max-height: 300px; position: absolute; z-index: 5;
+right: 329px; top: 343px; background: url("../images/casa/habitacion/habitacion-3-salaRosado.svg") no-repeat; }
+.habitacionCasa4Azul{ width: 100%; height: 100%; max-width: 262px; max-height: 300px; position: absolute; z-index: 5;
+right: 89px; top: 343px; background: url("../images/casa/habitacion/habitacion-4-cocinaAzul.svg") no-repeat; }
+.habitacionCasa4Verde{ width: 100%; height: 100%; max-width: 262px; max-height: 300px; position: absolute; z-index: 5;
+right: 89px; top: 343px; background: url("../images/casa/habitacion/habitacion-4-cocinaVerde.svg") no-repeat; }
+.habitacionCasa4Rosado{ width: 100%; height: 100%; max-width: 262px; max-height: 300px; position: absolute; z-index: 5;
+right: 89px; top: 343px; background: url("../images/casa/habitacion/habitacion-4-cocinaRosado.svg") no-repeat; }
