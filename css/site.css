@@ -14,7 +14,7 @@ src:url('../fonts/BradyBunchRemastered.ttf');src:url('../fonts/BradyBunchRemaste
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html, body, header { background: #2285c8; }
-body { position: absolute; width: 100%; height: 100%; color: white;
+body { position: absolute; width: 100%; height: 100%; color: white; overflow-y: hidden;
 font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 -webkit-font-smoothing: antialiased; overflow-x: hidden; }
 .hidden{ display: none; }
@@ -256,41 +256,116 @@ background: url("../images/escena11/menu/menu-principal-5-servicios-publicos-2-a
 background: url("../images/escena11/menu/menu-principal-5-servicios-publicos-2-alcantarillado.svg") no-repeat; }
 
 .bgCasa{ background: url("../images/casa/habitacion/casa-habitaciones-marca-de-agua.svg") no-repeat; width: 100%;
-height: 100%; max-width: 600px; max-height: 600px; position: absolute; right: 50px; top: 50px; }
-.techoCasa{ width: 100%; height: 100%; max-width: 600px; max-height: 600px; position: absolute; right: 50px;
-top: 50px; z-index: 6; }
+height: 100%; max-width: 600px; max-height: 530px; position: absolute; right: 50px; top: 130px; }
+.techoCasa{ width: 100%; height: 100%; max-width: 600px; max-height: 530px; position: absolute; right: 50px;
+top: 130px; z-index: 6; }
 .techo1{ background: url("../images/casa/techo/techo-1.svg") no-repeat; }
 .techo2{ background: url("../images/casa/techo/techo-2.svg") no-repeat; }
 .techo3{ background: url("../images/casa/techo/techo-3.svg") no-repeat; }
 .habitacionCasa1{ width: 100%; height: 100%; max-width: 310px; max-height: 300px; position: absolute; z-index: 5;
-right: 302px; top: 211px; background: url("../images/casa/habitacion/habitacion-1-habitacion.svg") no-repeat; }
+right: 302px; top: 291px; background: url("../images/casa/habitacion/habitacion-1-habitacion.svg") no-repeat; }
 .habitacionCasa2{ width: 100%; height: 100%; max-width: 233px; max-height: 300px; position: absolute; z-index: 5;
-right: 89px; top: 211px; background: url("../images/casa/habitacion/habitacion-2-bano.svg") no-repeat; }
-.habitacionCasa3{ width: 100%; height: 100%; max-width: 282px; max-height: 300px; position: absolute; z-index: 5;
-right: 329px; top: 343px; background: url("../images/casa/habitacion/habitacion-3-sala.svg") no-repeat; }
-.habitacionCasa4{ width: 100%; height: 100%; max-width: 262px; max-height: 300px; position: absolute; z-index: 5;
-right: 89px; top: 343px; background: url("../images/casa/habitacion/habitacion-4-cocina.svg") no-repeat; }
+right: 89px; top: 291px; background: url("../images/casa/habitacion/habitacion-2-bano.svg") no-repeat; }
+.habitacionCasa3{ width: 100%; height: 100%; max-width: 282px; max-height: 180px; position: absolute; z-index: 5;
+right: 329px; top: 423px; background: url("../images/casa/habitacion/habitacion-3-sala.svg") no-repeat; }
+.habitacionCasa4{ width: 100%; height: 100%; max-width: 262px; max-height: 180px; position: absolute; z-index: 5;
+right: 89px; top: 423px; background: url("../images/casa/habitacion/habitacion-4-cocina.svg") no-repeat; }
 .habitacionCasa1Azul{ width: 100%; height: 100%; max-width: 310px; max-height: 300px; position: absolute; z-index: 5;
-right: 302px; top: 211px; background: url("../images/casa/habitacion/habitacion-1-habitacionAzul.svg") no-repeat; }
-.habitacionCasa1Rosado{ width: 100%; height: 100%; max-width: 310px; max-height: 300px; position: absolute; z-index: 5;
-right: 302px; top: 211px; background: url("../images/casa/habitacion/habitacion-1-habitacionRosado.svg") no-repeat; }
+right: 302px; top: 291px; background: url("../images/casa/habitacion/habitacion-1-habitacionAzul.svg") no-repeat; }
+.habitacionCasa1Rosado{ width: 100%; height: 100%; max-width: 310px; max-height: 300px; position: absolute;
+z-index: 5; right: 302px; top: 291px;
+background: url("../images/casa/habitacion/habitacion-1-habitacionRosado.svg") no-repeat; }
 .habitacionCasa1Verde{ width: 100%; height: 100%; max-width: 310px; max-height: 300px; position: absolute; z-index: 5;
-right: 302px; top: 211px; background: url("../images/casa/habitacion/habitacion-1-habitacionVerde.svg") no-repeat; }
+right: 302px; top: 291px; background: url("../images/casa/habitacion/habitacion-1-habitacionVerde.svg") no-repeat; }
 .habitacionCasa2Azul{ width: 100%; height: 100%; max-width: 233px; max-height: 300px; position: absolute; z-index: 5;
-right: 89px; top: 211px; background: url("../images/casa/habitacion/habitacion-2-banoAzul.svg") no-repeat; }
+right: 89px; top: 291px; background: url("../images/casa/habitacion/habitacion-2-banoAzul.svg") no-repeat; }
 .habitacionCasa2Verde{ width: 100%; height: 100%; max-width: 233px; max-height: 300px; position: absolute; z-index: 5;
-right: 89px; top: 211px; background: url("../images/casa/habitacion/habitacion-2-banoVerde.svg") no-repeat; }
-.habitacionCasa2Rosado{ width: 100%; height: 100%; max-width: 233px; max-height: 300px; position: absolute; z-index: 5;
-right: 89px; top: 211px; background: url("../images/casa/habitacion/habitacion-2-banoRosado.svg") no-repeat; }
-.habitacionCasa3Azul{ width: 100%; height: 100%; max-width: 282px; max-height: 300px; position: absolute; z-index: 5;
-right: 329px; top: 343px; background: url("../images/casa/habitacion/habitacion-3-salaAzul.svg") no-repeat; }
-.habitacionCasa3Verde{ width: 100%; height: 100%; max-width: 282px; max-height: 300px; position: absolute; z-index: 5;
-right: 329px; top: 343px; background: url("../images/casa/habitacion/habitacion-3-salaVerde.svg") no-repeat; }
-.habitacionCasa3Rosado{ width: 100%; height: 100%; max-width: 282px; max-height: 300px; position: absolute; z-index: 5;
-right: 329px; top: 343px; background: url("../images/casa/habitacion/habitacion-3-salaRosado.svg") no-repeat; }
-.habitacionCasa4Azul{ width: 100%; height: 100%; max-width: 262px; max-height: 300px; position: absolute; z-index: 5;
-right: 89px; top: 343px; background: url("../images/casa/habitacion/habitacion-4-cocinaAzul.svg") no-repeat; }
-.habitacionCasa4Verde{ width: 100%; height: 100%; max-width: 262px; max-height: 300px; position: absolute; z-index: 5;
-right: 89px; top: 343px; background: url("../images/casa/habitacion/habitacion-4-cocinaVerde.svg") no-repeat; }
-.habitacionCasa4Rosado{ width: 100%; height: 100%; max-width: 262px; max-height: 300px; position: absolute; z-index: 5;
-right: 89px; top: 343px; background: url("../images/casa/habitacion/habitacion-4-cocinaRosado.svg") no-repeat; }
+right: 89px; top: 291px; background: url("../images/casa/habitacion/habitacion-2-banoVerde.svg") no-repeat; }
+.habitacionCasa2Rosado{ width: 100%; height: 100%; max-width: 233px; max-height: 300px; position: absolute;
+z-index: 5; right: 89px; top: 291px;
+background: url("../images/casa/habitacion/habitacion-2-banoRosado.svg") no-repeat; }
+.habitacionCasa3Azul{ width: 100%; height: 100%; max-width: 282px; max-height: 180px; position: absolute; z-index: 5;
+right: 329px; top: 423px; background: url("../images/casa/habitacion/habitacion-3-salaAzul.svg") no-repeat; }
+.habitacionCasa3Verde{ width: 100%; height: 100%; max-width: 282px; max-height: 180px; position: absolute; z-index: 5;
+right: 329px; top: 423px; background: url("../images/casa/habitacion/habitacion-3-salaVerde.svg") no-repeat; }
+.habitacionCasa3Rosado{ width: 100%; height: 100%; max-width: 282px; max-height: 180px; position: absolute;
+z-index: 5; right: 329px; top: 423px;
+background: url("../images/casa/habitacion/habitacion-3-salaRosado.svg") no-repeat; }
+.habitacionCasa4Azul{ width: 100%; height: 100%; max-width: 262px; max-height: 180px; position: absolute; z-index: 5;
+right: 89px; top: 423px; background: url("../images/casa/habitacion/habitacion-4-cocinaAzul.svg") no-repeat; }
+.habitacionCasa4Verde{ width: 100%; height: 100%; max-width: 262px; max-height: 180px; position: absolute; z-index: 5;
+right: 89px; top: 423px; background: url("../images/casa/habitacion/habitacion-4-cocinaVerde.svg") no-repeat; }
+.habitacionCasa4Rosado{ width: 100%; height: 100%; max-width: 262px; max-height: 180px; position: absolute;
+z-index: 5; right: 89px; top: 423px;
+background: url("../images/casa/habitacion/habitacion-4-cocinaRosado.svg") no-repeat; }
+
+.habitacionVentana1Ventana1{ width: 100%; height: 100%; max-width: 60px; max-height: 60px; position: absolute;
+z-index: 7; right: 440px; top: 311px;
+background: url("../images/casa/ventanas/ventana-1.svg") no-repeat; }
+.habitacionVentana1Ventana2{ width: 100%; height: 100%; max-width: 60px; max-height: 60px; position: absolute;
+z-index: 7; right: 440px; top: 311px;
+background: url("../images/casa/ventanas/ventana-2.svg") no-repeat; }
+.habitacionVentana1Ventana3{ width: 100%; height: 100%; max-width: 60px; max-height: 60px; position: absolute;
+z-index: 7; right: 440px; top: 311px;
+background: url("../images/casa/ventanas/ventana-3.svg") no-repeat; }
+
+.habitacionVentana2Ventana1{ width: 100%; height: 100%; max-width: 60px; max-height: 60px; position: absolute;
+z-index: 7; right: 158px; top: 311px;
+background: url("../images/casa/ventanas/ventana-1.svg") no-repeat; }
+.habitacionVentana2Ventana2{ width: 100%; height: 100%; max-width: 60px; max-height: 60px; position: absolute;
+z-index: 7; right: 158px; top: 311px;
+background: url("../images/casa/ventanas/ventana-2.svg") no-repeat; }
+.habitacionVentana2Ventana3{ width: 100%; height: 100%; max-width: 60px; max-height: 60px; position: absolute;
+z-index: 7; right: 158px; top: 311px;
+background: url("../images/casa/ventanas/ventana-3.svg") no-repeat; }
+
+.habitacionVentana3Ventana1{ width: 100%; height: 100%; max-width: 60px; max-height: 60px; position: absolute;
+z-index: 7; right: 440px; top: 448px;
+background: url("../images/casa/ventanas/ventana-1.svg") no-repeat; }
+.habitacionVentana3entana2{ width: 100%; height: 100%; max-width: 60px; max-height: 60px; position: absolute;
+z-index: 7; right: 440px; top: 448px;
+background: url("../images/casa/ventanas/ventana-2.svg") no-repeat; }
+.habitacionVentana3Ventana3{ width: 100%; height: 100%; max-width: 60px; max-height: 60px; position: absolute;
+z-index: 7; right: 440px; top: 448px;
+background: url("../images/casa/ventanas/ventana-3.svg") no-repeat; }
+
+.habitacionVentana4Ventana1{ width: 100%; height: 100%; max-width: 60px; max-height: 60px; position: absolute;
+z-index: 7; right: 190px; top: 448px;
+background: url("../images/casa/ventanas/ventana-1.svg") no-repeat; }
+.habitacionVentana4Ventana2{ width: 100%; height: 100%; max-width: 60px; max-height: 60px; position: absolute;
+z-index: 7; right: 190px; top: 448px;
+background: url("../images/casa/ventanas/ventana-2.svg") no-repeat; }
+.habitacionVentana4Ventana3{ width: 100%; height: 100%; max-width: 60px; max-height: 60px; position: absolute;
+z-index: 7; right: 190px; top: 448px;
+background: url("../images/casa/ventanas/ventana-3.svg") no-repeat; }
+
+.acueducto{ width: 100%; height: 100%; max-width: 680px; max-height: 580px; position: absolute; right: 94px;
+top: 420px; z-index: 8;
+background: url("../images/casa/servicios/servicio-publico-3-grifo-alcantarillado.svg") no-repeat; }
+.luzHabitacion1{ width: 100%; height: 100%; max-width: 60px; max-height: 80px; position: absolute;
+z-index: 9; right: 400px; top: 308px;
+background: url("../images/casa/servicios/servicio-publico-1-luz-lampara.svg") no-repeat; }
+.tvHabitacion1{ width: 100%; height: 100%; max-width: 50px; max-height: 50px; position: absolute;
+z-index: 9; right: 342px; top: 370px;
+background: url("../images/casa/servicios/servicio-publico-1-luz-tv.svg") no-repeat; }
+.luzHabitacion2{ width: 100%; height: 100%; max-width: 60px; max-height: 80px; position: absolute;
+z-index: 9; right: 195px; top: 308px;
+background: url("../images/casa/servicios/servicio-publico-1-luz-lampara.svg") no-repeat; }
+.aguaHabitacion2{ width: 100%; height: 100%; max-width: 40px; max-height: 80px; position: absolute;
+z-index: 9; right: 266px; top: 344px;
+background: url("../images/casa/servicios/servicio-publico-2-ducha.svg") no-repeat; }
+.aguaHabitacion2a{ width: 100%; height: 100%; max-width: 40px; max-height: 40px; position: absolute;
+z-index: 9; right: 104px; top: 354px;
+background: url("../images/casa/servicios/servicio-publico-2-grifo-lavamanos-lavaplatos.svg") no-repeat; }
+.luzHabitacion3{ width: 100%; height: 100%; max-width: 60px; max-height: 80px; position: absolute;
+z-index: 9; right: 400px; top: 442px;
+background: url("../images/casa/servicios/servicio-publico-1-luz-lampara.svg") no-repeat; }
+.tvHabitacion3{ width: 100%; height: 100%; max-width: 46px; max-height: 50px; position: absolute;
+z-index: 9; right: 527px; top: 510px;
+background: url("../images/casa/servicios/servicio-publico-1-luz-tv.svg") no-repeat; }
+.aguaHabitacion4{ width: 100%; height: 100%; max-width: 40px; max-height: 40px; position: absolute;
+z-index: 9; right: 122px; top: 490px;
+background: url("../images/casa/servicios/servicio-publico-2-grifo-lavamanos-lavaplatos.svg") no-repeat; }
+.luzHabitacion4{ width: 100%; height: 100%; max-width: 60px; max-height: 80px; position: absolute;
+z-index: 9; right: 236px; top: 442px;
+background: url("../images/casa/servicios/servicio-publico-1-luz-lampara.svg") no-repeat; }
