@@ -244,42 +244,70 @@ function fordward()
 	{
 		case "1":
 			currentScene="2";
+			alternateScene(currentScene);
 			break;
 		case "2":
 			currentScene="3";
+			alternateScene(currentScene);
 			break;
         case "3":
 			currentScene="4A";
+			alternateScene(currentScene);
 			break;
 		case "4A":
 			currentScene="4B";
+			alternateScene(currentScene);
 			break;
         case "4B":
 			currentScene="4C";
+			alternateScene(currentScene);
 			break;
         case "4C":
 			currentScene="4D";
+			alternateScene(currentScene);
 			break;
         case "4D":
 		 currentScene="4E";
+		 alternateScene(currentScene);
 		 break;
-	        case "4E":
+		 case "4E":
+		 currentScene="4F";
+		 alternateScene(currentScene);
+		 break;
+	    case "4F":
 			currentScene="7";
+			alternateScene(currentScene);
 			break;
         case "7":
 			currentScene="8";
+			alternateScene(currentScene);
+			$("#tiempo").show();
+			$("#nivel1").show();
+			$("#region").show();
 			break;
         case "8":
 			currentScene="9";
+			alternateScene(currentScene);
+			$("#tiempo").show();
+			$("#nivel1").show();
+			$("#region").show();
 			break;
         case "9":
 			currentScene="10";
+			alternateScene(currentScene);
+			$("#tiempo").show();
+			$("#nivel1").show();
+			$("#region").show();
 			break;
-        case "9":
+        case "10":
 			currentScene="11";
+			alternateScene(currentScene);
+			$("#tiempo").show();
+			$("#nivel1").show();
+			$("#region").show();
 			break;
 	}
-	alternateScene(currentScene);
+	
 	intro2('.btnJugar')
 }
 
@@ -311,8 +339,11 @@ function backward()
         case "4E":
 			currentScene="4D";
 			break;
-        case "7":
+        case "4F":
 			currentScene="4E";
+			break;
+		case "7":
+			currentScene="4F";
 			break;
         case "8":
 			currentScene="7";
@@ -347,6 +378,7 @@ function alternateScene(sceneNumber)
 	$("#escena4C").hide();
 	$("#escena4D").hide();
 	$("#escena4E").hide();
+	$("#escena4F").hide();
 	$("#escena7").hide();
 	$("#escena8").hide();
 	$("#escena9").hide();
@@ -375,6 +407,7 @@ function showScene(scene)
 	$("#escena4C").hide();
 	$("#escena4D").hide();
 	$("#escena4E").hide();
+	$("#escena4F").hide();
 	$("#escena7").hide();
 	$("#escena8").hide();
 	$("#escena9").hide();
