@@ -1,13 +1,43 @@
 currentScene="1";
-
-
-
+selectedRegion='';
+urlImagenRegion="";
+cssRegion="";
+selectedCharacter='';
 $( document ).ready(function() {
 	initialize();
 	alternateScene(currentScene);
 	intro('.btnJugar')
 
 });
+
+function generarNombreImagenXRegion()
+{
+	switch(selectedRegion)
+	{
+		case "Región Caribe":
+			cssRegion="regionCaribe";
+		     urlImagenRegion='../images/escena8/region-caribe-over.svg'
+		break;
+		case "Región Andina":
+		    cssRegion="regionAndina";
+		     urlImagenRegion='../images/escena8/region-andina-over.svg'
+		break;
+		case "Región Pacifica":
+			cssRegion="regionPacifica";
+		     urlImagenRegion='../images/escena8/region-pacifica-over'
+		break;
+		case "Región Amazonía":
+			cssRegion="regionAmazonia";
+		     urlImagenRegion='../images/escena8/region-amazonia-over.svg'
+		break;
+		case "Región Orinoquia":
+			cssRegion="regionOrinoquia";
+		     urlImagenRegion='../images/escena8/region-orinoquia-over.svg'
+		break;
+	}
+	$("#selectedRegion").attr("src",urlImagenRegion);
+	$("#selectedRegion").addClass(cssRegion);
+}
 
 function intro(elemento)
 {
@@ -86,6 +116,33 @@ function move(elemento, distancex, distancey)
 	});
 }
 
+function closeAll()
+{
+	$("#escena1").hide();
+	$("#escena2").hide();
+	$("#escena3").hide();
+	$("#escena4A").hide();
+	$("#escena4B").hide();
+	$("#escena4C").hide();
+	$("#escena4D").hide();
+	$("#escena4E").hide();
+	$("#escena7").hide();
+	$("#escena8").hide();
+	$("#escena9").hide();
+	$("#escena10").hide();
+	$("#regionAndina").hide();
+	$("#tiempo").hide();
+	$("#nivel1").hide();
+	$("#region").hide();
+	$("#casa").hide();
+	$("#menuLateral").hide();
+	$("#regionAmazonia").hide();
+	$("#regionCaribe").hide();
+	$("#regionOrinoquia").hide();
+	$("#regionPacifica").hide();
+	$("#pausa").hide();
+}
+
 function initialize()
 {
 	$('[class^="btnJugar"]').click(function(){
@@ -121,7 +178,59 @@ function initialize()
 	$('#salir').click(function(){
 		closeWindow();
 	})
+	
+	$('#campesino').click(function(){
+		selectedCharacter="campesino";
+		fordward();
+	})
+	
+	$('#costeno').click(function(){
+		selectedCharacter="costeno";
+		fordward();
+	})
+	
+	$('#desplazada').click(function(){
+		selectedCharacter="desplazada";
+		fordward();
+	})
+	
+	$('.regionMapa').click(function(e){
+		
+		selectedRegion=$(this).attr('title');
+		
+		
+		generarNombreImagenXRegion();
+		$("#regionSelect").html(selectedRegion);
+		$("#region").html(selectedRegion);
+		fordward();
+		$("#tiempo").show();
+		$("#nivel1").show();
+		$("#region").show();
+		startTime();
+	})
 
+}
+
+function startTime()
+{
+	
+	var timer2 = "10:01";
+var interval = setInterval(function() {
+
+
+	  var timer = timer2.split(':');
+	  //by parsing integer, I avoid all extra string processing
+	  var minutes = parseInt(timer[0], 10);
+	  var seconds = parseInt(timer[1], 10);
+	  --seconds;
+	  minutes = (seconds < 0) ? --minutes : minutes;
+	  if (minutes < 0) clearInterval(interval);
+	  seconds = (seconds < 0) ? 59 : seconds;
+	  seconds = (seconds < 10) ? '0' + seconds : seconds;
+	  //minutes = (minutes < 10) ?  minutes : minutes;
+	  $('#tiempo').html(minutes + ':' + seconds);
+	  timer2 = minutes + ':' + seconds;
+	}, 1000);
 }
 
 function pause()
@@ -243,6 +352,9 @@ function alternateScene(sceneNumber)
 	$("#escena9").hide();
 	$("#escena10").hide();
 	$("#regionAndina").hide();
+	$("#tiempo").hide();
+	$("#nivel1").hide();
+	$("#region").hide();
 	$("#casa").hide();
 	$("#menuLateral").hide();
 	$("#regionAmazonia").hide();
@@ -270,6 +382,9 @@ function showScene(scene)
 	$("#escena10").hide();
 		$("#regionAndina").hide();
 		$("#casa").hide();
+			$("#tiempo").hide();
+	$("#nivel1").hide();
+	$("#region").hide();
 	$("#menuLateral").hide();
 	$("#regionAmazonia").hide();
 	$("#regionCaribe").hide();
