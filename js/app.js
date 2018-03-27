@@ -258,15 +258,15 @@ function initialize()
 
 function initializePaintControls()
 {
-	$('#btnColorVerde').click(function(){
+	$('.btnColorVerde').click(function(){
 		alert('cambiando color verde');
 		pinturaLlena=true;
 	});
-	$('#btnColorAzul').click(function(){
+	$('.btnColorAzul').click(function(){
 		alert('cambiando color azul');
 		pinturaLlena=true;
 	});
-	$('#btnColorRosado').click(function(){
+	$('.btnColorRosado').click(function(){
 		alert('cambiando color rosado');
 		pinturaLlena=true;
 	});
@@ -274,15 +274,15 @@ function initializePaintControls()
 
 function initializeWindowControls()
 {
-	$('#btnVentana1').click(function(){
+	$('.btnVentana1').click(function(){
 		alert('colocando ventana 1');
 		ventanaLlena=true;
 	});
-	$('#btnVentana2').click(function(){
+	$('.btnVentana2').click(function(){
 		alert('colocando ventana 2');
 		ventanaLlena=true;
 	});
-	$('#btnVentana3').click(function(){
+	$('.btnVentana3').click(function(){
 		alert('colocando ventana 3');
 		ventanaLlena=true;
 	});
@@ -290,31 +290,34 @@ function initializeWindowControls()
 
 function initializeRoofControls()
 {
-	$('#btnTecho1').click(function(){
-		alert('colocando techo 1');
+	$('.btnTecho1').click(function(){
+		techoLleno=true;
+		$('#techo').addClass('techo1');
+		$('#techo').show();
+	});
+	$('.btnTecho2').click(function(){
+		$('#techo').addClass('techo2');
+		$('#techo').show();
 		techoLleno=true;
 	});
-	$('#btnTecho2').click(function(){
-		alert('colocando techo 2');
-		techoLleno=true;
-	});
-	$('#btnTecho3').click(function(){
-		alert('colocando techo 3');
+	$('.btnTecho3').click(function(){
+		$('#techo').addClass('techo3');
+		$('#techo').show();
 		techoLleno=true;
 	});
 }
 
 function initializeServiceControls()
 {
-	$('#btnServicio1').click(function(){
+	$('.btnServicio1').click(function(){
 		alert('colocando servicio de luz');
 		servicioLleno=true;
 	});
-	$('#btnServicio2').click(function(){
+	$('.btnServicio2').click(function(){
 		alert('colocando servicio de agua');
 		servicioLleno=true;
 	});
-	$('#btnServicio3').click(function(){
+	$('.btnServicio3').click(function(){
 		alert('colocando servicio de alcantarillado');
 		servicioLleno=true;
 	});
