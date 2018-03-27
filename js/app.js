@@ -12,6 +12,8 @@ ventanaLlena=false;
 techoLleno=false;
 pinturaLlena=false;
 servicioLleno=false;
+luzLlena=false;
+aguaLlena=false;
 elementosSiempreVisibles='';
 timerX = new InvervalTimer(function () { },1000);
 $( document ).ready(function() {
@@ -269,32 +271,69 @@ function initialize()
 function initializePaintControls()
 {
 	$('.btnColorVerde').click(function(){
-		alert('cambiando color verde');
+		$('#habitacion1').removeClass("habitacionCasa1").removeClass("habitacionCasa1Azul").removeClass("habitacionCasa1Verde").removeClass("habitacionCasa1Rosado").addClass('habitacionCasa1Verde');
+		$('#habitacion2').removeClass("habitacionCasa2").removeClass("habitacionCasa2Azul").removeClass("habitacionCasa2Verde").removeClass("habitacionCasa2Rosado").addClass('habitacionCasa2Verde');
+		$('#habitacion3').removeClass("habitacionCasa3").removeClass("habitacionCasa3Azul").removeClass("habitacionCasa3Verde").removeClass("habitacionCasa3Rosado").addClass('habitacionCasa3Verde');
+		$('#habitacion4').removeClass("habitacionCasa4").removeClass("habitacionCasa4Azul").removeClass("habitacionCasa4Verde").removeClass("habitacionCasa4Rosado").addClass('habitacionCasa4Verde');
 		pinturaLlena=true;
+		validarFinJuego();
+		
 	});
 	$('.btnColorAzul').click(function(){
-		alert('cambiando color azul');
+		$('#habitacion1').removeClass("habitacionCasa1").removeClass("habitacionCasa1Azul").removeClass("habitacionCasa1Verde").removeClass("habitacionCasa1Rosado").addClass('habitacionCasa1Azul');
+		$('#habitacion2').removeClass("habitacionCasa2").removeClass("habitacionCasa2Azul").removeClass("habitacionCasa2Verde").removeClass("habitacionCasa2Rosado").addClass('habitacionCasa2Azul');
+		$('#habitacion3').removeClass("habitacionCasa3").removeClass("habitacionCasa3Azul").removeClass("habitacionCasa3Verde").removeClass("habitacionCasa3Rosado").addClass('habitacionCasa3Azul');
+		$('#habitacion4').removeClass("habitacionCasa4").removeClass("habitacionCasa4Azul").removeClass("habitacionCasa4Verde").removeClass("habitacionCasa4Rosado").addClass('habitacionCasa4Azul');
 		pinturaLlena=true;
+		validarFinJuego();
 	});
 	$('.btnColorRosado').click(function(){
-		alert('cambiando color rosado');
+		$('#habitacion1').removeClass("habitacionCasa1").removeClass("habitacionCasa1Azul").removeClass("habitacionCasa1Verde").removeClass("habitacionCasa1Rosado").addClass('habitacionCasa1Rosado');
+		$('#habitacion2').removeClass("habitacionCasa2").removeClass("habitacionCasa2Azul").removeClass("habitacionCasa2Verde").removeClass("habitacionCasa2Rosado").addClass('habitacionCasa2Rosado');
+		$('#habitacion3').removeClass("habitacionCasa3").removeClass("habitacionCasa3Azul").removeClass("habitacionCasa3Verde").removeClass("habitacionCasa3Rosado").addClass('habitacionCasa3Rosado');
+		$('#habitacion4').removeClass("habitacionCasa4").removeClass("habitacionCasa4Azul").removeClass("habitacionCasa4Verde").removeClass("habitacionCasa4Rosado").addClass('habitacionCasa4Rosado');
 		pinturaLlena=true;
+		validarFinJuego();
 	});
 }
 
 function initializeWindowControls()
 {
 	$('.btnVentana1').click(function(){
-		alert('colocando ventana 1');
+		$('#ventana1').removeClass("habitacionVentana1Ventana1").removeClass("habitacionVentana1Ventana2").removeClass("habitacionVentana1Ventana3").addClass('habitacionVentana1Ventana1');
+		$('#ventana2').removeClass("habitacionVentana2Ventana1").removeClass("habitacionVentana2Ventana2").removeClass("habitacionVentana2Ventana3").addClass('habitacionVentana2Ventana1');
+		$('#ventana3').removeClass("habitacionVentana3Ventana1").removeClass("habitacionVentana3Ventana2").removeClass("habitacionVentana3Ventana3").addClass('habitacionVentana3Ventana1');
+		$('#ventana4').removeClass("habitacionVentana4Ventana1").removeClass("habitacionVentana4Ventana2").removeClass("habitacionVentana4Ventana3").addClass('habitacionVentana4Ventana1');
+		$('#ventana1').show();
+		$('#ventana2').show();
+		$('#ventana3').show();
+		$('#ventana4').show();
 		ventanaLlena=true;
+		validarFinJuego();
 	});
 	$('.btnVentana2').click(function(){
-		alert('colocando ventana 2');
+		$('#ventana1').removeClass("habitacionVentana1Ventana1").removeClass("habitacionVentana1Ventana2").removeClass("habitacionVentana1Ventana3").addClass('habitacionVentana1Ventana2');
+		$('#ventana2').removeClass("habitacionVentana2Ventana1").removeClass("habitacionVentana2Ventana2").removeClass("habitacionVentana2Ventana3").addClass('habitacionVentana2Ventana2');
+		$('#ventana3').removeClass("habitacionVentana3Ventana1").removeClass("habitacionVentana3Ventana2").removeClass("habitacionVentana3Ventana3").addClass('habitacionVentana3Ventana2');
+		$('#ventana4').removeClass("habitacionVentana4Ventana1").removeClass("habitacionVentana4Ventana2").removeClass("habitacionVentana4Ventana3").addClass('habitacionVentana4Ventana2');
+		$('#ventana1').show();
+		$('#ventana2').show();
+		$('#ventana3').show();
+		$('#ventana4').show();
 		ventanaLlena=true;
+		validarFinJuego();
 	});
 	$('.btnVentana3').click(function(){
-		alert('colocando ventana 3');
+		$('#ventana1').removeClass("habitacionVentana1Ventana1").removeClass("habitacionVentana1Ventana2").removeClass("habitacionVentana1Ventana3").addClass('habitacionVentana1Ventana3');
+		$('#ventana2').removeClass("habitacionVentana2Ventana1").removeClass("habitacionVentana2Ventana2").removeClass("habitacionVentana2Ventana3").addClass('habitacionVentana2Ventana3');
+		$('#ventana3').removeClass("habitacionVentana3Ventana1").removeClass("habitacionVentana3Ventana2").removeClass("habitacionVentana3Ventana3").addClass('habitacionVentana3Ventana3');
+		$('#ventana4').removeClass("habitacionVentana4Ventana1").removeClass("habitacionVentana4Ventana2").removeClass("habitacionVentana4Ventana3").addClass('habitacionVentana4Ventana3');
+		$('#ventana1').show();
+		$('#ventana2').show();
+		$('#ventana3').show();
+		$('#ventana4').show();
 		ventanaLlena=true;
+		validarFinJuego();
 	});
 }
 
@@ -304,28 +343,43 @@ function initializeRoofControls()
 		techoLleno=true;
 		$('#techo').removeClass("techo1").removeClass("techo2").removeClass("techo3").addClass('techo1');
 		$('#techo').show();
+		validarFinJuego();
 	});
 	$('.btnTecho2').click(function(){
 		$('#techo').removeClass("techo1").removeClass("techo2").removeClass("techo3").addClass('techo2');
 		$('#techo').show();
 		techoLleno=true;
+		validarFinJuego();
 	});
 	$('.btnTecho3').click(function(){
 		$('#techo').removeClass("techo1").removeClass("techo2").removeClass("techo3").addClass('techo3');
 		$('#techo').show();
 		techoLleno=true;
+		validarFinJuego();
 	});
 }
 
 function initializeServiceControls()
 {
 	$('.btnServicio1').click(function(){
-		alert('colocando servicio de luz');
-		servicioLleno=true;
+		
+		$('#luz1').show();
+		$('#luz2').show();
+		$('#luz3').show();
+		$('#luz4').show();
+		$('#tv1').show();
+		$('#tv2').show();
+		luzLlena =true;
+		validarFinJuego();
 	});
 	$('.btnServicio2').click(function(){
-		alert('colocando servicio de agua');
-		servicioLleno=true;
+		$('#agua1').show();
+		$('#agua2').show();
+		$('#agua3').show();
+		$('#agua4').show();
+		
+		aguaLlena =true;
+		validarFinJuego();
 	});
 	$('.btnServicio3').click(function(){
 		alert('colocando servicio de alcantarillado');
@@ -347,6 +401,7 @@ function initializeDragNDrop()
 		  console.log("dropped:"+selectedElement);
 		  if(selectedElement=='habitacion')
 		  {
+			  habitacionLlena=true;
 			  $("#habitacion1").show();
 			  mostrarMensajeDnD('habitacion','correcto');
 		  }
@@ -368,6 +423,7 @@ function initializeDragNDrop()
 		  console.log("dropped:"+selectedElement);
 		  if(selectedElement=='bano')
 		  {
+			  banoLleno=true;
 			  $("#habitacion2").show();
 			  mostrarMensajeDnD('bano','correcto');
 		  }
@@ -390,6 +446,7 @@ function initializeDragNDrop()
 		  if(selectedElement=='sala')
 		  {
 			  $("#habitacion3").show();
+			  salaLlena=true;
 			  mostrarMensajeDnD('sala','correcto');
 		  }
 		  else
@@ -411,6 +468,7 @@ function initializeDragNDrop()
 		  if(selectedElement=='cocina')
 		  {
 			  $("#habitacion4").show();
+			  cocinaLlena=true;
 			  mostrarMensajeDnD('cocina','correcto');
 		  }
 		  else
@@ -442,7 +500,7 @@ function mostrarMensajeDnD(elemento, tipo)
 
 function validarFinJuego()
 {
-	if(habitacionLlena==true && banoLleno==true && cocinaLlena==true && salaLlena==true && ventanaLlena==true && techoLleno==true && pinturaLlena==true && alcantarilladoLleno==true)
+	if(habitacionLlena==true && banoLleno==true && cocinaLlena==true && salaLlena==true && ventanaLlena==true && techoLleno==true && pinturaLlena==true && luzLlena==true&& aguaLlena==true)
 	{
 		alert('Juego terminado.')
 		//showScene(??);
