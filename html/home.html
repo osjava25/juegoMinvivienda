@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
   <link href="../css/site.css" rel="stylesheet">
   <script src="../js/jquery-3.3.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="../js/anime.min.js"></script>
   <script src="../js/app.js"></script>
 </head>
@@ -387,15 +388,15 @@
     <div class="bgDestelloVerde">
       <div class="contentScene7">
         <div class="personajeColombia">
-            <img src="../images/escena10/seleccion-colombiano-campesino-01.svg" />
+            <img id="imgPersonaje" src="../images/escena10/seleccion-colombiano-campesino-01.svg" />
         </div>
         <div class="bgMarcoRegiones">
           <div class="titMarcoCol">Colombianos</div>
           <div class="contentMarcoCol">
             <div class="imgSelRegion">
-              <img src="../images/escena8/icono-visto-bueno-regiones-01.svg" />
+              <img  src="../images/escena8/icono-visto-bueno-regiones-01.svg" />
             </div>
-            Muy bien amiguito!!<br/> Has seleccionado un campesino
+            Muy bien amiguito!!<br/> Has seleccionado un <span id="nombrePersonaje">campesino</span>
           </div>
           <div class="personajeMarco8">
             <img src="../images/escena10/personaje-guia-colombianos-mensaje-01.svg" />
@@ -411,24 +412,24 @@
 
 <div class="menuLateral" id="menuLateral">
   <div class="iconHabitacion">
-    <div class="menuHabitacion"><span class="btnHabitacion"></span><span class="btnBano"></span><span class="btnSala"></span>
-      <span class="btnCocina"></span>
+    <div class="menuHabitacion"><span title="habitacion" class="btnHabitacion"></span><span title="bano" class="btnBano"></span><span title="sala" class="btnSala"></span>
+      <span title="cocina" class="btnCocina"></span>
     </div>
   </div>
   <div class="iconParedes">
-    <div class="menuParedes"><span class="btnColorVerde"></span><span class="btnColorAzul"></span><span class="btnColorRosado"></span>
+    <div class="menuParedes"><span title="colorVerde" class="btnColorVerde"></span><span title="colorAzul" class="btnColorAzul"></span><span title="colorRosado" class="btnColorRosado"></span>
     </div>
   </div>
   <div class="iconVentanas">
-    <div class="menuVentanas"><span class="btnVentana1"></span><span class="btnVentana2"></span><span class="btnVentana3"></span>
+    <div class="menuVentanas"><span title="vetana1" class="btnVentana1"></span><span title="vetana2" class="btnVentana2"></span><span title="vetana3" class="btnVentana3"></span>
     </div>
   </div>
   <div class="iconTechos">
-    <div class="menuTechos"><span class="btnTecho1"></span><span class="btnTecho2"></span><span class="btnTecho3"></span>
+    <div class="menuTechos"><span title="techo1" class="btnTecho1"></span><span title="techo2" class="btnTecho2"></span><span title="techo3" class="btnTecho3"></span>
     </div>
   </div>
   <div class="iconServicios">
-    <div class="menuServicios"><span class="btnServicio1"></span><span class="btnServicio2"></span><span class="btnServicio3"></span>
+    <div class="menuServicios"><span title="servicio1" class="btnServicio1"></span><span title="servicio2" class="btnServicio2"></span><span title="servicio3" class="btnServicio3"></span>
     </div>
   </div>
 </div>
@@ -439,20 +440,20 @@
   <div class="luzHabitacion1 hidden" id="luz1"></div>
   <div class="tvHabitacion1 hidden" id="tv1"></div>
   <div class="habitacionVentana1Ventana1 hidden" id="ventana1"></div>
-  <div class="habitacionCasa1 hidden" id="habitacion1"></div>
+  <div class="habitacionCasa1"  id="habitacion1"></div>
   <div class="luzHabitacion2 hidden" id="luz2"></div>
   <div class="aguaHabitacion2 hidden" id="agua1"></div>
   <div class="aguaHabitacion2a hidden" id="agua2"></div>
   <div class="habitacionVentana2Ventana1 hidden" id="ventana2"></div>
-  <div class="habitacionCasa2 hidden" id="habitacion2"></div>
+  <div class="habitacionCasa2"   id="habitacion2"></div>
   <div class="luzHabitacion3 hidden" id="luz3"></div>
   <div class="tvHabitacion3 hidden" id="tv2"></div>
   <div class="habitacionVentana3Ventana1 hidden" id="ventana3"></div>
-  <div class="habitacionCasa3 hidden" id="habitacion3"></div>
+  <div class="habitacionCasa3"  id="habitacion3"></div>
   <div class="luzHabitacion4 hidden" id="luz4"></div>
   <div class="aguaHabitacion4 hidden" id="agua3"></div>
   <div class="habitacionVentana4Ventana1 hidden" id="ventana4"></div>
-  <div class="habitacionCasa4 hidden" id="habitacion4"></div>
+  <div class="habitacionCasa4"  id="habitacion4"></div>
   <div class="bgCasa"></div>
 </div>
 
