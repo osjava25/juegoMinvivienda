@@ -34,7 +34,7 @@ function generarNombreImagenXRegion()
 		break;
 		case "Región Pacifica":
 			cssRegion="regionPacifica";
-		     urlImagenRegion='../images/escena8/region-pacifica-over'
+		     urlImagenRegion='../images/escena8/region-pacifica-over.svg'
 		break;
 		case "Región Amazonía":
 			cssRegion="regionAmazonia";
@@ -54,15 +54,15 @@ function generarPersonaje()
 	switch(selectedCharacter)
 	{
 		case "campesino":
-			cssRegion="regionCaribe";
+			//cssRegion="regionCaribe";
 		     urlImagenPersonaje='../images/escena10/seleccion-colombiano-campesino-01.svg'
 		break;
 		case "costeno":
-		    cssRegion="regionAndina";
+		    //cssRegion="regionAndina";
 		     urlImagenPersonaje='../images/escena10/seleccion-colombiano-costeno-01.svg'
 		break;
 		case "desplazada":
-			cssRegion="regionPacifica";
+			//cssRegion="regionPacifica";
 		     urlImagenPersonaje='../images/escena10/seleccion-colombiano-desplazada-01.svg'
 		break;
 		
@@ -182,7 +182,7 @@ function initialize()
 	})
 	
 	$('.btnJugar2').click(function(){
-		showScene('casa,menuLateral');
+		showScene('casa,menuLateral,'+cssRegion);
 		
 	})
 
