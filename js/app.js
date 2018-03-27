@@ -13,6 +13,7 @@ techoLleno=false;
 pinturaLlena=false;
 servicioLleno=false;
 elementosSiempreVisibles='';
+timerX = new InvervalTimer(function () { },1000);
 $( document ).ready(function() {
 	initialize();
 	alternateScene(currentScene);
@@ -183,7 +184,7 @@ function initialize()
 	
 	$('.btnJugar2').click(function(){
 		showScene('casa,menuLateral,tiempo,nivel1,region,'+cssRegion);
-		
+		elementosSiempreVisibles='casa,menuLateral,tiempo,nivel1,region,'+cssRegion;
 	})
 
 	$('.flecha-anterior').click(function(){
@@ -204,7 +205,16 @@ function initialize()
 	})
 
 	$('#seguir').click(function(){
-		alternateScene(currentScene);
+		timerX.resume();         
+		if(elementosSiempreVisibles.length>0)
+		{
+			showScene(elementosSiempreVisibles);
+		}
+		else
+		{
+			alternateScene(currentScene);
+		}
+		
 	})
 
 	$('#reiniciar').click(function(){
@@ -292,16 +302,16 @@ function initializeRoofControls()
 {
 	$('.btnTecho1').click(function(){
 		techoLleno=true;
-		$('#techo').addClass('techo1');
+		$('#techo').removeClass("techo1").removeClass("techo2").removeClass("techo3").addClass('techo1');
 		$('#techo').show();
 	});
 	$('.btnTecho2').click(function(){
-		$('#techo').addClass('techo2');
+		$('#techo').removeClass("techo1").removeClass("techo2").removeClass("techo3").addClass('techo2');
 		$('#techo').show();
 		techoLleno=true;
 	});
 	$('.btnTecho3').click(function(){
-		$('#techo').addClass('techo3');
+		$('#techo').removeClass("techo1").removeClass("techo2").removeClass("techo3").addClass('techo3');
 		$('#techo').show();
 		techoLleno=true;
 	});
@@ -443,7 +453,7 @@ function startTime()
 {
 	
 	var timer2 = "10:01";
-var interval = setInterval(function() {
+    timerX = new InvervalTimer(function () {
 
 
 	  var timer = timer2.split(':');
@@ -464,6 +474,7 @@ var interval = setInterval(function() {
 function pause()
 {
 	showScene('pausa');
+	timerX.pause();
 }
 
 function fordward()
@@ -664,4 +675,38 @@ function showScene(scenes)
 function closeWindow(){
     var newWindow = window.open('', '_self', ''); //open the current window
     window.close(location.href);
+}
+
+function InvervalTimer(callback, interval) {
+	var timerId, startTime, remaining = 0;
+	var state = 0; //  0 = idle, 1 = running, 2 = paused, 3= resumed
+
+	this.pause = function () {
+		if (state != 1) return;
+
+		remaining = interval - (new Date() - startTime);
+		window.clearInterval(timerId);
+		state = 2;
+	};
+
+	this.resume = function () {
+		if (state != 2) return;
+
+		state = 3;
+		window.setTimeout(this.timeoutCallback, remaining);
+	};
+
+	this.timeoutCallback = function () {
+		if (state != 3) return;
+
+		callback();
+
+		startTime = new Date();
+		timerId = window.setInterval(callback, interval);
+		state = 1;
+	};
+
+	startTime = new Date();
+	timerId = window.setInterval(callback, interval);
+	state = 1;
 }
