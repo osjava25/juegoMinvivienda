@@ -1,8 +1,18 @@
-currentScene="1";
+currentScene="7";
 selectedRegion='';
 urlImagenRegion="";
+urlImagenPersonaje="";
 cssRegion="";
 selectedCharacter='';
+habitacionLlena=false;
+banoLleno=false;
+cocinaLlena=false;
+salaLlena=false;
+ventanaLlena=false;
+techoLleno=false;
+pinturaLlena=false;
+servicioLleno=false;
+
 $( document ).ready(function() {
 	initialize();
 	alternateScene(currentScene);
@@ -37,6 +47,28 @@ function generarNombreImagenXRegion()
 	}
 	$("#selectedRegion").attr("src",urlImagenRegion);
 	$("#selectedRegion").addClass(cssRegion);
+}
+
+function generarPersonaje()
+{
+	switch(selectedCharacter)
+	{
+		case "campesino":
+			cssRegion="regionCaribe";
+		     urlImagenPersonaje='../images/escena10/seleccion-colombiano-campesino-01.svg'
+		break;
+		case "costeno":
+		    cssRegion="regionAndina";
+		     urlImagenPersonaje='../images/escena10/seleccion-colombiano-costeno-01.svg'
+		break;
+		case "desplazada":
+			cssRegion="regionPacifica";
+		     urlImagenPersonaje='../images/escena10/seleccion-colombiano-desplazada-01.svg'
+		break;
+		
+	}
+	$("#imgPersonaje").attr("src",urlImagenPersonaje);
+	$("#nombrePersonaje").html(selectedCharacter);
 }
 
 function intro(elemento)
@@ -145,8 +177,13 @@ function closeAll()
 
 function initialize()
 {
-	$('[class^="btnJugar"]').click(function(){
+	$('.btnJugar').click(function(){
 		btnJugarClick();
+	})
+	
+	$('.btnJugar2').click(function(){
+		showScene('casa,menuLateral');
+		
 	})
 
 	$('.flecha-anterior').click(function(){
@@ -181,16 +218,19 @@ function initialize()
 	
 	$('#campesino').click(function(){
 		selectedCharacter="campesino";
+		generarPersonaje();
 		fordward();
 	})
 	
 	$('#costeno').click(function(){
 		selectedCharacter="costeno";
+		generarPersonaje();
 		fordward();
 	})
 	
 	$('#desplazada').click(function(){
 		selectedCharacter="desplazada";
+		generarPersonaje();
 		fordward();
 	})
 	
@@ -208,7 +248,192 @@ function initialize()
 		$("#region").show();
 		startTime();
 	})
+	
+	initializeDragNDrop();
+	initializeRoofControls();
+    initializePaintControls();
+	initializeWindowControls();
+	initializeServiceControls();
+}
 
+function initializePaintControls()
+{
+	$('#btnColorVerde').click(function(){
+		alert('cambiando color verde');
+		pinturaLlena=true;
+	});
+	$('#btnColorAzul').click(function(){
+		alert('cambiando color azul');
+		pinturaLlena=true;
+	});
+	$('#btnColorRosado').click(function(){
+		alert('cambiando color rosado');
+		pinturaLlena=true;
+	});
+}
+
+function initializeWindowControls()
+{
+	$('#btnVentana1').click(function(){
+		alert('colocando ventana 1');
+		ventanaLlena=true;
+	});
+	$('#btnVentana2').click(function(){
+		alert('colocando ventana 2');
+		ventanaLlena=true;
+	});
+	$('#btnVentana3').click(function(){
+		alert('colocando ventana 3');
+		ventanaLlena=true;
+	});
+}
+
+function initializeRoofControls()
+{
+	$('#btnTecho1').click(function(){
+		alert('colocando techo 1');
+		techoLleno=true;
+	});
+	$('#btnTecho2').click(function(){
+		alert('colocando techo 2');
+		techoLleno=true;
+	});
+	$('#btnTecho3').click(function(){
+		alert('colocando techo 3');
+		techoLleno=true;
+	});
+}
+
+function initializeServiceControls()
+{
+	$('#btnServicio1').click(function(){
+		alert('colocando servicio de luz');
+		servicioLleno=true;
+	});
+	$('#btnServicio2').click(function(){
+		alert('colocando servicio de agua');
+		servicioLleno=true;
+	});
+	$('#btnServicio3').click(function(){
+		alert('colocando servicio de alcantarillado');
+		servicioLleno=true;
+	});
+}
+
+function initializeDragNDrop()
+{
+	$( ".btnCocina" ).draggable({ revert: "invalid" });
+	$( ".btnHabitacion" ).draggable({ revert: "valid" });
+	$( ".btnBano" ).draggable({ revert: "valid" });
+	$( ".btnSala" ).draggable({ revert: "valid" });
+
+
+	$("#habitacion1").droppable({ 
+	   drop: function( event, ui ) { 
+		  var selectedElement=$(ui.draggable).attr("title");
+		  console.log("dropped:"+selectedElement);
+		  if(selectedElement=='habitacion')
+		  {
+			  $("#habitacion1").show();
+			  mostrarMensajeDnD('habitacion','correcto');
+		  }
+		  else
+		  {
+			  mostrarMensajeDnD('habitacion','incorrecto');
+		  }
+
+	   }, 
+	   out: function( event, ui ) { 
+		 
+		  console.log("out:"+$(ui.draggable).attr("title"))
+
+	   } 
+	});
+	$("#habitacion2").droppable({ 
+	   drop: function( event, ui ) { 
+		  var selectedElement=$(ui.draggable).attr("title");
+		  console.log("dropped:"+selectedElement);
+		  if(selectedElement=='bano')
+		  {
+			  $("#habitacion2").show();
+			  mostrarMensajeDnD('bano','correcto');
+		  }
+		  else
+		  {
+			  mostrarMensajeDnD('bano','incorrecto');
+		  }
+
+	   }, 
+	   out: function( event, ui ) { 
+		 
+		  console.log("out:"+$(ui.draggable).attr("title"))
+
+	   } 
+	});
+	$("#habitacion3").droppable({ 
+	   drop: function( event, ui ) { 
+		  var selectedElement=$(ui.draggable).attr("title");
+		  console.log("dropped:"+selectedElement);
+		  if(selectedElement=='sala')
+		  {
+			  $("#habitacion3").show();
+			  mostrarMensajeDnD('sala','correcto');
+		  }
+		  else
+		  {
+			  mostrarMensajeDnD('sala','incorrecto');
+		  }
+
+	   }, 
+	   out: function( event, ui ) { 
+		 
+		  console.log("out:"+$(ui.draggable).attr("title"))
+
+	   } 
+	});
+	$("#habitacion4").droppable({ 
+	   drop: function( event, ui ) { 
+		  var selectedElement=$(ui.draggable).attr("title");
+		  console.log("dropped:"+selectedElement);
+		  if(selectedElement=='cocina')
+		  {
+			  $("#habitacion4").show();
+			  mostrarMensajeDnD('cocina','correcto');
+		  }
+		  else
+		  {
+			  mostrarMensajeDnD('cocina','incorrecto');
+		  }
+
+	   }, 
+	   out: function( event, ui ) { 
+		 
+		  console.log("out:"+$(ui.draggable).attr("title"))
+
+	   } 
+	});
+	
+}
+
+function mostrarMensajeDnD(elemento, tipo)
+{
+	if(tipo=='incorrecto')
+	{
+		alert('error colocando '+elemento)
+	}
+	else
+	{
+		alert(elemento + ' ubicado correctamente')
+	}
+}
+
+function validarFinJuego()
+{
+	if(habitacionLlena==true && banoLleno==true && cocinaLlena==true && salaLlena==true && ventanaLlena==true && techoLleno==true && pinturaLlena==true && alcantarilladoLleno==true)
+	{
+		alert('Juego terminado.')
+		//showScene(??);
+	}
 }
 
 function startTime()
@@ -298,6 +523,7 @@ function fordward()
 			$("#tiempo").show();
 			$("#nivel1").show();
 			$("#region").show();
+			
 			break;
         case "10":
 			currentScene="11";
@@ -397,7 +623,7 @@ function alternateScene(sceneNumber)
 	$("#escena"+sceneNumber).show();
 }
 
-function showScene(scene)
+function showScene(scenes)
 {
 	$("#escena1").hide();
 	$("#escena2").hide();
@@ -411,19 +637,25 @@ function showScene(scene)
 	$("#escena7").hide();
 	$("#escena8").hide();
 	$("#escena9").hide();
-	$("#pausa").hide();
 	$("#escena10").hide();
-		$("#regionAndina").hide();
-		$("#casa").hide();
-			$("#tiempo").hide();
+	$("#regionAndina").hide();
+	$("#tiempo").hide();
 	$("#nivel1").hide();
 	$("#region").hide();
+	$("#casa").hide();
 	$("#menuLateral").hide();
 	$("#regionAmazonia").hide();
 	$("#regionCaribe").hide();
 	$("#regionOrinoquia").hide();
 	$("#regionPacifica").hide();
-	$("#"+scene).show();
+	$("#pausa").hide();
+	
+	var scenes_ = scenes.split(',');
+	$.each( scenes_, function( index, value ) {
+		value=value.trim();
+		$("#"+value).show();
+	});
+	
 }
 
 function closeWindow(){
