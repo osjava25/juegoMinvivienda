@@ -12,7 +12,7 @@ ventanaLlena=false;
 techoLleno=false;
 pinturaLlena=false;
 servicioLleno=false;
-
+elementosSiempreVisibles='';
 $( document ).ready(function() {
 	initialize();
 	alternateScene(currentScene);
@@ -182,7 +182,7 @@ function initialize()
 	})
 	
 	$('.btnJugar2').click(function(){
-		showScene('casa,menuLateral,'+cssRegion);
+		showScene('casa,menuLateral,tiempo,nivel1,region,'+cssRegion);
 		
 	})
 
