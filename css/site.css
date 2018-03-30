@@ -88,6 +88,9 @@ background-repeat: no-repeat; }
 .bgMarco{ display: table-cell; text-align: center; width: 600px; height: 400px;
    background: url("../images/escena2/marco-texto.svg") no-repeat; background-size: contain;
    padding-top: 66px; background-position: center 60px; }
+.bgMarcoError{ display: table-cell; text-align: center; width: 600px; height: 400px;
+  background: url("../images/casa/mensajes/titulo-marco-error.svg") no-repeat; background-size: contain;
+  padding-top: 66px; background-position: center 60px; }
 .bgMarcoRegiones{ text-align: center; width:100%; max-width: 400px; display: inline-block;
    background: url("../images/escena2/marco-texto.svg") no-repeat; background-size: contain;
    background-position: center center; margin: 20% auto; height: 100%; max-height: 300px; float: left; }
