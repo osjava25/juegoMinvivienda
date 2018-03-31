@@ -60,10 +60,12 @@ font-family: 'Gloria Hallelujah', cursive; font-weight: 600; font-size: 0.8em;}
 .controlFooter .btnJugar{ width: 200px; height: 60px; margin: 0 auto; }
 .controlFooter .btnJugar2{ width: 300px; height: 80px; margin: 0 auto; }
 .scene1, .scene2, .scene3, .scene4, .scenePasos, .scenePausa, .scene7, .scene8, .scene9, .scene10,
-.scene11, .mensajeCasa{ height: 100%; width: 100%; }
+.scene11, .mensajeCasa, .scene12,.scene13,.scene14, .diploma{ height: 100%; width: 100%; }
 .bgSceneAzul{ height: 100%; width: 100%; background-image: url("../images/bg/fondo-azul.svg");
 background-size: cover; background-position-y: center; }
 .bgSceneVerde{ height: 100%; width: 100%; background-image: url("../images/bg/fondo-verde-avisos.svg");
+background-size: cover; background-position-y: center; }
+.bgSceneMorado{ height: 100%; width: 100%; background-image: url("../images/diploma/marco-diploma.svg");
 background-size: cover; background-position-y: center; }
 .bgDestelloAzul{ height: 100%; width: 100%; background-image: url("../images/bg/destellos.svg");
 background-size: cover; background-position-y: center; }
