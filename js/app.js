@@ -300,6 +300,7 @@ function initializePaintControls()
 		$('#habitacion3').removeClass("habitacionCasa3").removeClass("habitacionCasa3Azul").removeClass("habitacionCasa3Verde").removeClass("habitacionCasa3Rosado").addClass('habitacionCasa3Verde');
 		$('#habitacion4').removeClass("habitacionCasa4").removeClass("habitacionCasa4Azul").removeClass("habitacionCasa4Verde").removeClass("habitacionCasa4Rosado").addClass('habitacionCasa4Verde');
 		pinturaLlena=true;
+		showScene('mensajeColor');
 		validarFinJuego();
 		
 	});
@@ -309,6 +310,7 @@ function initializePaintControls()
 		$('#habitacion3').removeClass("habitacionCasa3").removeClass("habitacionCasa3Azul").removeClass("habitacionCasa3Verde").removeClass("habitacionCasa3Rosado").addClass('habitacionCasa3Azul');
 		$('#habitacion4').removeClass("habitacionCasa4").removeClass("habitacionCasa4Azul").removeClass("habitacionCasa4Verde").removeClass("habitacionCasa4Rosado").addClass('habitacionCasa4Azul');
 		pinturaLlena=true;
+		showScene('mensajeColor');
 		validarFinJuego();
 	});
 	$('.btnColorRosado').click(function(){
@@ -317,6 +319,7 @@ function initializePaintControls()
 		$('#habitacion3').removeClass("habitacionCasa3").removeClass("habitacionCasa3Azul").removeClass("habitacionCasa3Verde").removeClass("habitacionCasa3Rosado").addClass('habitacionCasa3Rosado');
 		$('#habitacion4').removeClass("habitacionCasa4").removeClass("habitacionCasa4Azul").removeClass("habitacionCasa4Verde").removeClass("habitacionCasa4Rosado").addClass('habitacionCasa4Rosado');
 		pinturaLlena=true;
+		showScene('mensajeColor');
 		validarFinJuego();
 	});
 }
@@ -333,6 +336,7 @@ function initializeWindowControls()
 		$('#ventana3').show();
 		$('#ventana4').show();
 		ventanaLlena=true;
+		showScene('mensajeVentanas');
 		validarFinJuego();
 	});
 	$('.btnVentana2').click(function(){
@@ -345,6 +349,7 @@ function initializeWindowControls()
 		$('#ventana3').show();
 		$('#ventana4').show();
 		ventanaLlena=true;
+		showScene('mensajeVentanas');
 		validarFinJuego();
 	});
 	$('.btnVentana3').click(function(){
@@ -357,6 +362,7 @@ function initializeWindowControls()
 		$('#ventana3').show();
 		$('#ventana4').show();
 		ventanaLlena=true;
+		showScene('mensajeVentanas');
 		validarFinJuego();
 	});
 }
@@ -367,18 +373,21 @@ function initializeRoofControls()
 		techoLleno=true;
 		$('#techo').removeClass("techo1").removeClass("techo2").removeClass("techo3").addClass('techo1');
 		$('#techo').show();
+		showScene('mensajeTecho');
 		validarFinJuego();
 	});
 	$('.btnTecho2').click(function(){
 		$('#techo').removeClass("techo1").removeClass("techo2").removeClass("techo3").addClass('techo2');
 		$('#techo').show();
 		techoLleno=true;
+		showScene('mensajeTecho');
 		validarFinJuego();
 	});
 	$('.btnTecho3').click(function(){
 		$('#techo').removeClass("techo1").removeClass("techo2").removeClass("techo3").addClass('techo3');
 		$('#techo').show();
 		techoLleno=true;
+		showScene('mensajeTecho');
 		validarFinJuego();
 	});
 }
@@ -394,6 +403,7 @@ function initializeServiceControls()
 		$('#tv1').show();
 		$('#tv2').show();
 		luzLlena =true;
+		showScene('mensajeLuz');
 		validarFinJuego();
 	});
 	$('.btnServicio2').click(function(){
@@ -403,11 +413,14 @@ function initializeServiceControls()
 		$('#agua4').show();
 		
 		aguaLlena =true;
+		showScene('mensajeAgua');
 		validarFinJuego();
 	});
 	$('.btnServicio3').click(function(){
-		alert('colocando servicio de alcantarillado');
+		$('#acueducto').show();
+		showScene('mensajeAlcantarillado');
 		servicioLleno=true;
+		validarFinJuego();
 	});
 }
 
@@ -519,7 +532,7 @@ function mostrarMensajeDnD(elemento, tipo)
 	var scene_ = 'mensaje'+elemento
 	if(tipo=='incorrecto')
 	{
-		showScene('mensajeError');
+		showScene('mensajeUbicacion');
 	}
 	else
 	{
@@ -530,7 +543,7 @@ function mostrarMensajeDnD(elemento, tipo)
 
 function validarFinJuego()
 {
-	if(habitacionLlena==true && banoLleno==true && cocinaLlena==true && salaLlena==true && ventanaLlena==true && techoLleno==true && pinturaLlena==true && luzLlena==true&& aguaLlena==true)
+	if(habitacionLlena==true && banoLleno==true && cocinaLlena==true && salaLlena==true && ventanaLlena==true && techoLleno==true && pinturaLlena==true && luzLlena==true&& aguaLlena==true&&servicioLleno==true)
 	{
 		//alert('Juego terminado.')
 		timerX.pause();
