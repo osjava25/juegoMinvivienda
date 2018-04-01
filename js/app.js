@@ -184,9 +184,33 @@ function initialize()
 		btnJugarClick();
 	})
 	
+	$('.btnJugar5').click(function(){
+		btnJugarClick();
+	})
+	
+	$('.btnFinal2').click(function(){
+		printDiv();
+	})
+	
+	$('.btnFinal1').click(function(){
+		alert('fin')
+	})
+	
 	$('.btnJugar2').click(function(){
 		showScene('casa,menuLateral,tiempo,nivel1,region,'+cssRegion);
 		elementosSiempreVisibles='casa,menuLateral,tiempo,nivel1,region,'+cssRegion;
+		
+	})
+	
+	$('.btnJugar3').click(function(){
+		showScene('casa,menuLateral,tiempo,nivel1,region,'+cssRegion);
+		elementosSiempreVisibles='casa,menuLateral,tiempo,nivel1,region,'+cssRegion;
+	})
+	
+	$('.btnJugar4').click(function(){
+		currentScene="12";
+		showScene('escena12');
+		
 	})
 
 	$('.flecha-anterior').click(function(){
@@ -389,10 +413,10 @@ function initializeServiceControls()
 
 function initializeDragNDrop()
 {
-	$( ".btnCocina" ).draggable({ revert: "invalid" });
-	$( ".btnHabitacion" ).draggable({ revert: "valid" });
-	$( ".btnBano" ).draggable({ revert: "valid" });
-	$( ".btnSala" ).draggable({ revert: "valid" });
+	$( ".btnCocina" ).draggable({   cursor: 'move',revert: "invalid" });
+	$( ".btnHabitacion" ).draggable({   cursor: 'move',revert: "valid" });
+	$( ".btnBano" ).draggable({   cursor: 'move',revert: "valid" });
+	$( ".btnSala" ).draggable({   cursor: 'move',revert: "valid" });
 
 
 	$("#habitacion1").droppable({ 
@@ -403,11 +427,12 @@ function initializeDragNDrop()
 		  {
 			  habitacionLlena=true;
 			  $("#habitacion1").show();
-			  mostrarMensajeDnD('habitacion','correcto');
+			  mostrarMensajeDnD('Habitacion','correcto');
+			  $(".btnHabitacion").hide();
 		  }
 		  else
 		  {
-			  mostrarMensajeDnD('habitacion','incorrecto');
+			  mostrarMensajeDnD('Habitacion','incorrecto');
 		  }
 
 	   }, 
@@ -425,11 +450,12 @@ function initializeDragNDrop()
 		  {
 			  banoLleno=true;
 			  $("#habitacion2").show();
-			  mostrarMensajeDnD('bano','correcto');
+			  mostrarMensajeDnD('Bano','correcto');
+			  $(".btnBano").hide();
 		  }
 		  else
 		  {
-			  mostrarMensajeDnD('bano','incorrecto');
+			  mostrarMensajeDnD('Bano','incorrecto');
 		  }
 
 	   }, 
@@ -447,11 +473,12 @@ function initializeDragNDrop()
 		  {
 			  $("#habitacion3").show();
 			  salaLlena=true;
-			  mostrarMensajeDnD('sala','correcto');
+			  mostrarMensajeDnD('Sala','correcto');
+			  $(".btnSala").hide();
 		  }
 		  else
 		  {
-			  mostrarMensajeDnD('sala','incorrecto');
+			  mostrarMensajeDnD('Sala','incorrecto');
 		  }
 
 	   }, 
@@ -469,11 +496,12 @@ function initializeDragNDrop()
 		  {
 			  $("#habitacion4").show();
 			  cocinaLlena=true;
-			  mostrarMensajeDnD('cocina','correcto');
+			  mostrarMensajeDnD('Cocina','correcto');
+			  $(".btnCocina").hide();
 		  }
 		  else
 		  {
-			  mostrarMensajeDnD('cocina','incorrecto');
+			  mostrarMensajeDnD('Cocina','incorrecto');
 		  }
 
 	   }, 
@@ -488,13 +516,15 @@ function initializeDragNDrop()
 
 function mostrarMensajeDnD(elemento, tipo)
 {
+	var scene_ = 'mensaje'+elemento
 	if(tipo=='incorrecto')
 	{
-		alert('error colocando '+elemento)
+		showScene('mensajeError');
 	}
 	else
 	{
-		alert(elemento + ' ubicado correctamente')
+		showScene(scene_);
+		//alert(elemento + ' ubicado correctamente')
 	}
 }
 
@@ -502,8 +532,9 @@ function validarFinJuego()
 {
 	if(habitacionLlena==true && banoLleno==true && cocinaLlena==true && salaLlena==true && ventanaLlena==true && techoLleno==true && pinturaLlena==true && luzLlena==true&& aguaLlena==true)
 	{
-		alert('Juego terminado.')
-		//showScene(??);
+		//alert('Juego terminado.')
+		timerX.pause();
+		showScene('mensajeFelicitacion');
 	}
 }
 
@@ -525,8 +556,17 @@ function startTime()
 	  seconds = (seconds < 10) ? '0' + seconds : seconds;
 	  //minutes = (minutes < 10) ?  minutes : minutes;
 	  $('#tiempo').html(minutes + ':' + seconds);
+	  if(minutes==0&&seconds==0)
+	  {
+		  finTiempoJuego();
+	  }
 	  timer2 = minutes + ':' + seconds;
 	}, 1000);
+}
+
+function finTiempoJuego()
+{
+	alert('fin del tiempo');
 }
 
 function pause()
@@ -604,6 +644,34 @@ function fordward()
 			$("#nivel1").show();
 			$("#region").show();
 			break;
+		case "11":
+			currentScene="12";
+			alternateScene(currentScene);
+			$("#tiempo").show();
+			$("#nivel1").show();
+			$("#region").show();
+			break;
+		case "12":
+			currentScene="13";
+			alternateScene(currentScene);
+			$("#tiempo").hide();
+			$("#nivel1").show();
+			$("#region").show();
+			break;
+		case "13":
+			currentScene="14";
+			alternateScene(currentScene);
+			$("#tiempo").hide();
+			$("#nivel1").show();
+			$("#region").show();
+			break;
+		case "14":
+			scene_="diploma";
+			showScene(scene_);
+			$("#tiempo").hide();
+			$("#nivel1").show();
+			$("#region").show();
+			break;
 	}
 	
 	intro2('.btnJugar')
@@ -666,6 +734,23 @@ function btnJugarClick()
 	fordward();
 }
 
+function printDiv() 
+{
+
+  var divToPrint=document.getElementById('casa');
+
+  var newWin=window.open('','Print-Window');
+
+  newWin.document.open();
+
+  newWin.document.write('<html><body onload="window.print()">'+divToPrint.innerHTML+'</body></html>');
+
+  newWin.document.close();
+
+  setTimeout(function(){newWin.close();},10);
+
+}
+
 function alternateScene(sceneNumber)
 {
 	$("#escena1").hide();
@@ -681,6 +766,25 @@ function alternateScene(sceneNumber)
 	$("#escena8").hide();
 	$("#escena9").hide();
 	$("#escena10").hide();
+	$("#escena11").hide();
+	$("#escena12").hide();
+	$("#escena13").hide();
+	$("#escena14").hide();
+	$("#diploma").hide();
+	
+	$("#mensajeHabitacion").hide();
+	$("#mensajeBano").hide();
+	$("#mensajeSala").hide();
+	$("#mensajeCocina").hide();
+	$("#mensajeColor").hide();
+	$("#mensajeVentanas").hide();
+	$("#mensajeTecho").hide();
+	$("#mensajeLuz").hide();
+	$("#mensajeAgua").hide();
+	$("#mensajeAlcantarillado").hide();
+	$("#mensajeError").hide();
+	$("#mensajeUbicacion").hide();
+	$("#mensajeFelicitacion").hide();
 	$("#regionAndina").hide();
 	$("#tiempo").hide();
 	$("#nivel1").hide();
@@ -710,6 +814,27 @@ function showScene(scenes)
 	$("#escena8").hide();
 	$("#escena9").hide();
 	$("#escena10").hide();
+	$("#escena11").hide();
+	$("#escena12").hide();
+	$("#escena13").hide();
+	$("#escena14").hide();
+	$("#diploma").hide();
+	
+	$("#mensajeHabitacion").hide();
+	$("#mensajeBano").hide();
+	$("#mensajeSala").hide();
+	$("#mensajeCocina").hide();
+	$("#mensajeColor").hide();
+	$("#mensajeVentanas").hide();
+	$("#mensajeTecho").hide();
+	$("#mensajeLuz").hide();
+	$("#mensajeAgua").hide();
+	$("#mensajeAlcantarillado").hide();
+	$("#mensajeError").hide();
+	$("#mensajeUbicacion").hide();
+	$("#mensajeFelicitacion").hide();
+				
+	
 	$("#regionAndina").hide();
 	$("#tiempo").hide();
 	$("#nivel1").hide();
