@@ -58,6 +58,9 @@ font-family: 'Gloria Hallelujah', cursive; font-weight: 600; font-size: 0.8em;}
 
 .controlFooter{ position: absolute; bottom: 20px; text-align: center; left: 0; width: 100%; }
 .controlFooter .btnJugar{ width: 200px; height: 60px; margin: 0 auto; }
+.controlFooter .btnJugar5{ width: 200px; height: 60px; margin: 0 auto; }
+.controlFooter .btnJugar3{ width: 200px; height: 60px; margin: 0 auto; }
+.controlFooter .btnJugar4{ width: 200px; height: 60px; margin: 0 auto; }
 .controlFooter .btnJugar2{ width: 300px; height: 80px; margin: 0 auto; }
 .scene1, .scene2, .scene3, .scene4, .scenePasos, .scenePausa, .scene7, .scene8, .scene9, .scene10,
 .scene11, .mensajeCasa, .scene12,.scene13,.scene14, .diploma{ height: 100%; width: 100%; }
