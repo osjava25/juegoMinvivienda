@@ -1,4 +1,4 @@
-currentScene="1";
+currentScene="1"; 
 selectedRegion='';
 urlImagenRegion="";
 urlImagenPersonaje="";
