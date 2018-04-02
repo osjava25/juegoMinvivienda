@@ -57,15 +57,16 @@ margin-top: 1px; margin-right: 20px;}
 font-family: 'Gloria Hallelujah', cursive; font-weight: 600; font-size: 0.8em;}
 
 .controlFooter{ position: absolute; bottom: 20px; text-align: center; left: 0; width: 100%; }
-.controlFooter .btnJugar{ width: 200px; height: 60px; margin: 0 auto; }
-.controlFooter .btnJugar5{ width: 200px; height: 60px; margin: 0 auto; }
-.controlFooter .btnJugar3{ width: 200px; height: 60px; margin: 0 auto; }
-.controlFooter .btnJugar4{ width: 200px; height: 60px; margin: 0 auto; }
-.controlFooter .btnJugar2{ width: 300px; height: 80px; margin: 0 auto; }
+.controlFooter .btnJugar{ width: 200px; height: 60px; margin: 0 auto; cursor: hand; cursor: pointer; }
+.controlFooter .btnJugar5{ width: 200px; height: 60px; margin: 0 auto; cursor: hand; cursor: pointer; }
+.controlFooter .btnJugar3{ width: 200px; height: 60px; margin: 0 auto; cursor: hand; cursor: pointer; }
+.controlFooter .btnJugar4{ width: 200px; height: 60px; margin: 0 auto; cursor: hand; cursor: pointer; }
+.controlFooter .btnJugar2{ width: 300px; height: 80px; margin: 0 auto; cursor: hand; cursor: pointer; }
+.flecha-siguiente, .flecha-anterior{ cursor: hand; cursor: pointer; }
 .scene1, .scene2, .scene3, .scene4, .scenePasos, .scenePausa, .scene7, .scene8, .scene9, .scene10,
 .scene11, .mensajeCasa, .scene12,.scene13,.scene14, .diploma{ height: 100%; width: 100%; }
-.bgSceneAzul{ height: 100%; width: 100%; background-image: url("../images/bg/fondo-azul.svg");
-background-size: cover; background-position-y: center; }
+.bgSceneAzul{ height: 100%; width: 100%; background: url("../images/bg/fondo-azul.svg") no-repeat;
+background-size: cover; background-position: center; }
 .bgSceneVerde{ height: 100%; width: 100%; background-image: url("../images/bg/fondo-verde-avisos.svg");
 background-size: cover; background-position-y: center; }
 .bgSceneRojo{ height: 100%; width: 100%; background-size: cover; background-position-y: center;
@@ -73,10 +74,43 @@ background-image: url("../images/casa/mensajes/fondo-rojo-tiempo-agotado.svg"); 
 .bgSceneMorado{ height: 100%; width: 100%; background-image: url("../images/diploma/bg-marco-diploma.svg");
 background-size: cover; background-position-y: center; }
 .bgDestelloAzul{ height: 100%; width: 100%; background-image: url("../images/bg/destellos.svg");
-background-size: cover; background-position-y: center; }
+background-size: 70%; background-position: center; background-repeat: no-repeat; }
 .bgDestelloVerde{ height: 100%; width: 100%; background-image: url("../images/bg/destellos.svg");
 background-size: auto; background-position-y: center; background-position-x: center;
 background-repeat: no-repeat; }
+.bgDestelloAzul{ animation-duration: 6s; animation-name: desJuego; animation-iteration-count: infinite;
+animation-direction: alternate; }
+.bgDestelloVerde{ animation-duration: 6s; animation-name: desJuego; animation-iteration-count: infinite;
+animation-direction: alternate; }
+.bgSceneAzul{ animation-duration: 4s; animation-name: bgAzul; animation-iteration-count: infinite;
+animation-direction: alternate; }
+.bgSceneVerde{ animation-duration: 4s; animation-name: bgAzul; animation-iteration-count: infinite;
+animation-direction: alternate; }
+.bgSceneRojo{ animation-duration: 4s; animation-name: bgAzul; animation-iteration-count: infinite;
+animation-direction: alternate; }
+
+@keyframes desJuego {
+  from {
+  background-size: 50%;
+  }
+  to {
+  background-size: 100%;
+  }
+}
+@keyframes bgAzul {
+  from {
+  background-size: 100%;
+  }
+  to {
+  background-size: 150%;
+  }
+}
+
+
+.menuParedes span, .menuVentanas span, .menuTechos span, .menuServicios span, .menuHabitacion span{
+cursor: hand; cursor: pointer; }
+
+
 .contentScene1{ height: 80%; margin: 0 auto; }
 .contentScene1 .bgGrua{ text-align: center; }
 .contentScene1 .bgGrua img{ width: 100%; height:auto; max-width: 480px; }
