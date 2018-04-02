@@ -253,20 +253,20 @@ function initialize()
 		closeWindow();
 	})
 	
-	$('#campesino').click(function(){
-		selectedCharacter="campesino";
+	$('#personaje1').click(function(){
+		selectedCharacter=$(this).attr('title');
 		generarPersonaje();
 		fordward();
 	})
 	
-	$('#costeno').click(function(){
-		selectedCharacter="costeno";
+	$('#personaje2').click(function(){
+		selectedCharacter=$(this).attr('title');
 		generarPersonaje();
 		fordward();
 	})
 	
-	$('#desplazada').click(function(){
-		selectedCharacter="desplazada";
+	$('#personaje3').click(function(){
+		selectedCharacter=$(this).attr('title');
 		generarPersonaje();
 		fordward();
 	})
@@ -279,6 +279,7 @@ function initialize()
 		generarNombreImagenXRegion();
 		$("#regionSelect").html(selectedRegion);
 		$("#region").html(selectedRegion);
+		cargarPersonajes();
 		fordward();
 		$("#tiempo").show();
 		$("#nivel1").show();
@@ -291,6 +292,73 @@ function initialize()
     initializePaintControls();
 	initializeWindowControls();
 	initializeServiceControls();
+}
+
+function cargarPersonajes()
+{
+	
+	switch(selectedRegion)
+	{
+		case "Región Caribe":
+			$("#personaje1").removeClass();
+			$("#personaje1").addClass('colombianoCampesino imgColombiano');
+			$("#personaje1").attr('title','campesino');
+			$("#personaje2").removeClass();
+			$("#personaje2").addClass('colombianoEmbarazada imgColombiano');
+			$("#personaje2").attr('title','madre');
+			$("#personaje3").removeClass();
+			$("#personaje3").addClass('colombianoCosteno imgColombiano');
+			$("#personaje3").attr('title','costeño');
+			
+		break;
+		case "Región Andina":
+		    $("#personaje1").removeClass();
+			$("#personaje1").addClass('colombianoRolo imgColombiano');
+			$("#personaje1").attr('title','rolo');
+			$("#personaje2").removeClass();
+			$("#personaje2").addClass('colombianoDesplazada imgColombiano');
+			$("#personaje2").attr('title','desplazada');
+			$("#personaje3").removeClass();
+			$("#personaje3").addClass('colombianoPaisa imgColombiano');
+			$("#personaje3").attr('title','paisa');
+		break;
+		case "Región Pacifica":
+			$("#personaje1").removeClass();
+			$("#personaje1").addClass('colombianoCampesino imgColombiano');
+			$("#personaje1").attr('title','campesino');
+			$("#personaje2").removeClass();
+			$("#personaje2").addClass('colombianoEmbarazada imgColombiano');
+			$("#personaje2").attr('title','madre');
+			$("#personaje3").removeClass();
+			$("#personaje3").addClass('colombianoRolo imgColombiano');
+			$("#personaje3").attr('title','rolo');
+		break;
+		case "Región Amazonía":
+			$("#personaje1").removeClass();
+			$("#personaje1").addClass('colombianoRolo imgColombiano');
+			$("#personaje1").attr('title','rolo');
+			$("#personaje2").removeClass();
+			$("#personaje2").addClass('colombianoCampesino imgColombiano');
+			$("#personaje2").attr('title','campesino');
+			$("#personaje3").removeClass();
+			$("#personaje3").addClass('colombianoLlanero imgColombiano');
+			$("#personaje3").attr('title','llanero');
+		break;
+		case "Región Orinoquia":
+			$("#personaje1").removeClass();
+			$("#personaje1").addClass('colombianoDesplazada imgColombiano');
+			$("#personaje1").attr('title','desplazada');
+			$("#personaje2").removeClass();
+			$("#personaje2").addClass('colombianoEmbarazada imgColombiano');
+			$("#personaje2").attr('title','madre');
+			$("#personaje3").removeClass();
+			$("#personaje3").addClass('colombianoLlanero imgColombiano');
+			$("#personaje3").attr('title','llanero');
+		break;
+	}
+	$("#selectedRegion").attr("src",urlImagenRegion);
+	//$("#selectedRegion").addClass(cssRegion);
+	$("#region").addClass(cssRegion);
 }
 
 function initializePaintControls()
