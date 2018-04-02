@@ -1,9 +1,10 @@
-currentScene="1"; 
+currentScene="1";
 selectedRegion='';
 urlImagenRegion="";
 urlImagenPersonaje="";
 cssRegion="";
 selectedCharacter='';
+textoPersonaje='';
 habitacionLlena=false;
 banoLleno=false;
 cocinaLlena=false;
@@ -59,20 +60,43 @@ function generarPersonaje()
 	{
 		case "campesino":
 			//cssRegion="regionCaribe";
-		     urlImagenPersonaje='../images/escena10/seleccion-colombiano-campesino-01.svg'
+		     urlImagenPersonaje='../images/escena10/seleccion-colombiano-campesino-01.svg';
+				 textoPersonaje= "un " + selectedCharacter;
 		break;
-		case "costeno":
+		case "costeño":
 		    //cssRegion="regionAndina";
-		     urlImagenPersonaje='../images/escena10/seleccion-colombiano-costeno-01.svg'
+		     urlImagenPersonaje='../images/escena10/seleccion-colombiano-costeno-01.svg';
+				 textoPersonaje= "un " + selectedCharacter;
 		break;
 		case "desplazada":
 			//cssRegion="regionPacifica";
-		     urlImagenPersonaje='../images/escena10/seleccion-colombiano-desplazada-01.svg'
+		     urlImagenPersonaje='../images/escena10/seleccion-colombiano-desplazada-01.svg';
+				 textoPersonaje= "una " + selectedCharacter;
+		break;
+		case "madre":
+			//cssRegion="regionPacifica";
+		     urlImagenPersonaje='../images/escena10/seleccion-colombiano-madre-01.svg';
+				 textoPersonaje= "una " + selectedCharacter;
+		break;
+		case "rolo":
+			//cssRegion="regionPacifica";
+		     urlImagenPersonaje='../images/escena10/seleccion-colombiano-rolo.svg';
+				 textoPersonaje= "un " + selectedCharacter;
+		break;
+		case "paisa":
+			//cssRegion="regionPacifica";
+		     urlImagenPersonaje='../images/escena10/seleccion-colombiano-paisa-01.svg';
+				 textoPersonaje= "un " + selectedCharacter;
+		break;
+		case "llanero":
+			//cssRegion="regionPacifica";
+		     urlImagenPersonaje='../images/escena10/seleccion-colombiano-llanero-01.svg';
+				 textoPersonaje= "un " + selectedCharacter;
 		break;
 
 	}
 	$("#imgPersonaje").attr("src",urlImagenPersonaje);
-	$("#nombrePersonaje").html(selectedCharacter);
+	$("#nombrePersonaje").html(textoPersonaje);
 }
 
 function intro(elemento)
