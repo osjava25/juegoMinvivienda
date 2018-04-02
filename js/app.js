@@ -49,7 +49,7 @@ function generarNombreImagenXRegion()
 		break;
 	}
 	$("#selectedRegion").attr("src",urlImagenRegion);
-	$("#selectedRegion").addClass(cssRegion);
+	$("#region").addClass(cssRegion);
 }
 
 function generarPersonaje()
@@ -68,7 +68,7 @@ function generarPersonaje()
 			//cssRegion="regionPacifica";
 		     urlImagenPersonaje='../images/escena10/seleccion-colombiano-desplazada-01.svg'
 		break;
-		
+
 	}
 	$("#imgPersonaje").attr("src",urlImagenPersonaje);
 	$("#nombrePersonaje").html(selectedCharacter);
@@ -183,34 +183,34 @@ function initialize()
 	$('.btnJugar').click(function(){
 		btnJugarClick();
 	})
-	
+
 	$('.btnJugar5').click(function(){
 		btnJugarClick();
 	})
-	
+
 	$('.btnFinal2').click(function(){
 		printDiv();
 	})
-	
+
 	$('.btnFinal1').click(function(){
 		alert('fin')
 	})
-	
+
 	$('.btnJugar2').click(function(){
 		showScene('casa,menuLateral,tiempo,nivel1,region,'+cssRegion);
 		elementosSiempreVisibles='casa,menuLateral,tiempo,nivel1,region,'+cssRegion;
-		
+
 	})
-	
+
 	$('.btnJugar3').click(function(){
 		showScene('casa,menuLateral,tiempo,nivel1,region,'+cssRegion);
 		elementosSiempreVisibles='casa,menuLateral,tiempo,nivel1,region,'+cssRegion;
 	})
-	
+
 	$('.btnJugar4').click(function(){
 		currentScene="12";
 		showScene('escena12');
-		
+
 	})
 
 	$('.flecha-anterior').click(function(){
@@ -231,7 +231,7 @@ function initialize()
 	})
 
 	$('#seguir').click(function(){
-		timerX.resume();         
+		timerX.resume();
 		if(elementosSiempreVisibles.length>0)
 		{
 			showScene(elementosSiempreVisibles);
@@ -240,7 +240,7 @@ function initialize()
 		{
 			alternateScene(currentScene);
 		}
-		
+
 	})
 
 	$('#reiniciar').click(function(){
@@ -251,30 +251,30 @@ function initialize()
 	$('#salir').click(function(){
 		closeWindow();
 	})
-	
+
 	$('#campesino').click(function(){
 		selectedCharacter="campesino";
 		generarPersonaje();
 		fordward();
 	})
-	
+
 	$('#costeno').click(function(){
 		selectedCharacter="costeno";
 		generarPersonaje();
 		fordward();
 	})
-	
+
 	$('#desplazada').click(function(){
 		selectedCharacter="desplazada";
 		generarPersonaje();
 		fordward();
 	})
-	
+
 	$('.regionMapa').click(function(e){
-		
+
 		selectedRegion=$(this).attr('title');
-		
-		
+
+
 		generarNombreImagenXRegion();
 		$("#regionSelect").html(selectedRegion);
 		$("#region").html(selectedRegion);
@@ -284,7 +284,7 @@ function initialize()
 		$("#region").show();
 		startTime();
 	})
-	
+
 	initializeDragNDrop();
 	initializeRoofControls();
     initializePaintControls();
@@ -302,7 +302,7 @@ function initializePaintControls()
 		pinturaLlena=true;
 		showScene('mensajeColor');
 		validarFinJuego();
-		
+
 	});
 	$('.btnColorAzul').click(function(){
 		$('#habitacion1').removeClass("habitacionCasa1").removeClass("habitacionCasa1Azul").removeClass("habitacionCasa1Verde").removeClass("habitacionCasa1Rosado").addClass('habitacionCasa1Azul');
@@ -395,7 +395,7 @@ function initializeRoofControls()
 function initializeServiceControls()
 {
 	$('.btnServicio1').click(function(){
-		
+
 		$('#luz1').show();
 		$('#luz2').show();
 		$('#luz3').show();
@@ -411,7 +411,7 @@ function initializeServiceControls()
 		$('#agua2').show();
 		$('#agua3').show();
 		$('#agua4').show();
-		
+
 		aguaLlena =true;
 		showScene('mensajeAgua');
 		validarFinJuego();
@@ -432,8 +432,8 @@ function initializeDragNDrop()
 	$( ".btnSala" ).draggable({   cursor: 'move',revert: "valid" });
 
 
-	$("#habitacion1").droppable({ 
-	   drop: function( event, ui ) { 
+	$("#habitacion1").droppable({
+	   drop: function( event, ui ) {
 		  var selectedElement=$(ui.draggable).attr("title");
 		  console.log("dropped:"+selectedElement);
 		  if(selectedElement=='habitacion')
@@ -448,15 +448,15 @@ function initializeDragNDrop()
 			  mostrarMensajeDnD('Habitacion','incorrecto');
 		  }
 
-	   }, 
-	   out: function( event, ui ) { 
-		 
+	   },
+	   out: function( event, ui ) {
+
 		  console.log("out:"+$(ui.draggable).attr("title"))
 
-	   } 
+	   }
 	});
-	$("#habitacion2").droppable({ 
-	   drop: function( event, ui ) { 
+	$("#habitacion2").droppable({
+	   drop: function( event, ui ) {
 		  var selectedElement=$(ui.draggable).attr("title");
 		  console.log("dropped:"+selectedElement);
 		  if(selectedElement=='bano')
@@ -471,15 +471,15 @@ function initializeDragNDrop()
 			  mostrarMensajeDnD('Bano','incorrecto');
 		  }
 
-	   }, 
-	   out: function( event, ui ) { 
-		 
+	   },
+	   out: function( event, ui ) {
+
 		  console.log("out:"+$(ui.draggable).attr("title"))
 
-	   } 
+	   }
 	});
-	$("#habitacion3").droppable({ 
-	   drop: function( event, ui ) { 
+	$("#habitacion3").droppable({
+	   drop: function( event, ui ) {
 		  var selectedElement=$(ui.draggable).attr("title");
 		  console.log("dropped:"+selectedElement);
 		  if(selectedElement=='sala')
@@ -494,15 +494,15 @@ function initializeDragNDrop()
 			  mostrarMensajeDnD('Sala','incorrecto');
 		  }
 
-	   }, 
-	   out: function( event, ui ) { 
-		 
+	   },
+	   out: function( event, ui ) {
+
 		  console.log("out:"+$(ui.draggable).attr("title"))
 
-	   } 
+	   }
 	});
-	$("#habitacion4").droppable({ 
-	   drop: function( event, ui ) { 
+	$("#habitacion4").droppable({
+	   drop: function( event, ui ) {
 		  var selectedElement=$(ui.draggable).attr("title");
 		  console.log("dropped:"+selectedElement);
 		  if(selectedElement=='cocina')
@@ -517,14 +517,14 @@ function initializeDragNDrop()
 			  mostrarMensajeDnD('Cocina','incorrecto');
 		  }
 
-	   }, 
-	   out: function( event, ui ) { 
-		 
+	   },
+	   out: function( event, ui ) {
+
 		  console.log("out:"+$(ui.draggable).attr("title"))
 
-	   } 
+	   }
 	});
-	
+
 }
 
 function mostrarMensajeDnD(elemento, tipo)
@@ -553,7 +553,7 @@ function validarFinJuego()
 
 function startTime()
 {
-	
+
 	var timer2 = "10:01";
     timerX = new InvervalTimer(function () {
 
@@ -648,7 +648,7 @@ function fordward()
 			$("#tiempo").show();
 			$("#nivel1").show();
 			$("#region").show();
-			
+
 			break;
         case "10":
 			currentScene="11";
@@ -686,7 +686,7 @@ function fordward()
 			$("#region").show();
 			break;
 	}
-	
+
 	intro2('.btnJugar')
 }
 
@@ -747,7 +747,7 @@ function btnJugarClick()
 	fordward();
 }
 
-function printDiv() 
+function printDiv()
 {
 
   var divToPrint=document.getElementById('casa');
@@ -784,7 +784,7 @@ function alternateScene(sceneNumber)
 	$("#escena13").hide();
 	$("#escena14").hide();
 	$("#diploma").hide();
-	
+
 	$("#mensajeHabitacion").hide();
 	$("#mensajeBano").hide();
 	$("#mensajeSala").hide();
@@ -832,7 +832,7 @@ function showScene(scenes)
 	$("#escena13").hide();
 	$("#escena14").hide();
 	$("#diploma").hide();
-	
+
 	$("#mensajeHabitacion").hide();
 	$("#mensajeBano").hide();
 	$("#mensajeSala").hide();
@@ -846,8 +846,8 @@ function showScene(scenes)
 	$("#mensajeError").hide();
 	$("#mensajeUbicacion").hide();
 	$("#mensajeFelicitacion").hide();
-				
-	
+
+
 	$("#regionAndina").hide();
 	$("#tiempo").hide();
 	$("#nivel1").hide();
@@ -859,13 +859,13 @@ function showScene(scenes)
 	$("#regionOrinoquia").hide();
 	$("#regionPacifica").hide();
 	$("#pausa").hide();
-	
+
 	var scenes_ = scenes.split(',');
 	$.each( scenes_, function( index, value ) {
 		value=value.trim();
 		$("#"+value).show();
 	});
-	
+
 }
 
 function closeWindow(){
