@@ -212,11 +212,13 @@ function initialize()
 	$('.btnJugarE').click(function(){
 		currentScene="1";
 		alternateScene(currentScene);
+		location.href="home.html";
 	})
 
 	$('.btnFinal2').click(function(){
 		currentScene="1";
 		alternateScene(currentScene);
+		location.href="home.html";
 	})
 
 	$('.btnJugar5').click(function(){
@@ -258,7 +260,12 @@ function initialize()
 	})
 
 	$('.pasos').click(function(){
-		currentScene="1";
+		
+		showScene('pasos');
+	})
+	
+	$('#btnCerrarPasos').click(function(){
+		
 		alternateScene(currentScene);
 	})
 
@@ -278,6 +285,7 @@ function initialize()
 	$('#reiniciar').click(function(){
 		currentScene="1";
 		alternateScene(currentScene);
+		location.href="home.html";
 	})
 
 	$('#salir').click(function(){
@@ -739,7 +747,7 @@ function fordward()
         case "7":
 			currentScene="8";
 			alternateScene(currentScene);
-			$("#tiempo").show();
+			$("#tiempo").hide();
 			$("#nivel").removeClass().addClass("iconControlSupIzq nivel2");
 			$("#nivel").show();
 
@@ -788,16 +796,16 @@ function fordward()
 			alternateScene(currentScene);
 			$("#tiempo").hide();
 			$("#nivel").removeClass().addClass("iconControlSupIzq nivel3");
-			$("#nivel").show();
-			$("#region").show();
+			$("#nivel").hide();
+			$("#region").hide();
 			break;
 		case "14":
 			scene_="diploma";
 			showScene(scene_);
 			$("#tiempo").hide();
 			$("#nivel").removeClass().addClass("iconControlSupIzq nivel3");
-			$("#nivel").show();
-			$("#region").show();
+			$("#nivel").hide();
+			$("#region").hide();
 			break;
 	}
 
@@ -892,7 +900,7 @@ function alternateScene(sceneNumber)
 	$("#escena13").hide();
 	$("#escena14").hide();
 	$("#diploma").hide();
-
+$("#pasos").hide();
 	$("#mensajeHabitacion").hide();
 	$("#mensajeBano").hide();
 	$("#mensajeSala").hide();
@@ -940,7 +948,7 @@ function showScene(scenes)
 	$("#escena13").hide();
 	$("#escena14").hide();
 	$("#diploma").hide();
-
+$("#pasos").hide();
 	$("#mensajeHabitacion").hide();
 	$("#mensajeBano").hide();
 	$("#mensajeSala").hide();
