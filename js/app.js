@@ -36,7 +36,7 @@ function generarNombreImagenXRegion()
 		    cssRegion="regionAndina";
 		     urlImagenRegion='../images/escena8/region-andina-over.svg'
 		break;
-		case "Región Pacifica":
+		case "Región Pacífica":
 			cssRegion="regionPacifica";
 		     urlImagenRegion='../images/escena8/region-pacifica-over.svg'
 		break;
@@ -44,7 +44,7 @@ function generarNombreImagenXRegion()
 			cssRegion="regionAmazonia";
 		     urlImagenRegion='../images/escena8/region-amazonia-over.svg'
 		break;
-		case "Región Orinoquia":
+		case "Región Orinoquía":
 			cssRegion="regionOrinoquia";
 		     urlImagenRegion='../images/escena8/region-orinoquia-over.svg'
 		break;
@@ -208,12 +208,12 @@ function initialize()
 	$('.btnJugar').click(function(){
 		btnJugarClick();
 	})
-	
+
 	$('.btnJugarE').click(function(){
 		currentScene="1";
 		alternateScene(currentScene);
 	})
-	
+
 	$('.btnFinal2').click(function(){
 		currentScene="1";
 		alternateScene(currentScene);
@@ -227,7 +227,7 @@ function initialize()
 		printDiv();
 	})
 
-	
+
 	$('.btnJugar2').click(function(){
 		showScene('casa,menuLateral,tiempo,nivel1,region,'+cssRegion);
 		elementosSiempreVisibles='casa,menuLateral,tiempo,nivel1,region,'+cssRegion;
@@ -354,7 +354,7 @@ function cargarPersonajes()
 			$("#personaje3").addClass('colombianoPaisa imgColombiano');
 			$("#personaje3").attr('title','paisa');
 		break;
-		case "Región Pacifica":
+		case "Región Pacífica":
 			$("#personaje1").removeClass();
 			$("#personaje1").addClass('colombianoCampesino imgColombiano');
 			$("#personaje1").attr('title','campesino');
@@ -376,7 +376,7 @@ function cargarPersonajes()
 			$("#personaje3").addClass('colombianoLlanero imgColombiano');
 			$("#personaje3").attr('title','llanero');
 		break;
-		case "Región Orinoquia":
+		case "Región Orinoquía":
 			$("#personaje1").removeClass();
 			$("#personaje1").addClass('colombianoDesplazada imgColombiano');
 			$("#personaje1").attr('title','desplazada');
@@ -685,7 +685,7 @@ function startTime()
 function finTiempoJuego()
 {
 	showScene('mensajeErrorTiempo');
-    
+
 }
 
 function pause()
@@ -742,7 +742,7 @@ function fordward()
 			$("#tiempo").show();
 			$("#nivel").removeClass().addClass("iconControlSupIzq nivel2");
 			$("#nivel").show();
-			
+
 			$("#region").show();
 			break;
         case "8":
@@ -864,11 +864,11 @@ function btnJugarClick()
 function printDiv() {
 
     var printContent = document.getElementById("print");
-    var printWindow = window.open("");                
+    var printWindow = window.open("");
     printWindow.document.write(printContent.innerHTML);
     printWindow.document.write("<script src=\'http://code.jquery.com/jquery-1.10.1.min.js\'><\/script>");
     printWindow.document.write("<script>$(window).load(function(){ print(); close(); });<\/script>");
-    printWindow.document.close();          
+    printWindow.document.close();
 
 }
 
