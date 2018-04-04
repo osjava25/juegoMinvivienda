@@ -185,6 +185,8 @@ color: #000; }
 .personajeMarco8 { width: 150px; position: absolute; bottom: 0; right: 15%; }
 .flecha-siguiente{ width: 15%; position: relative; right: -30%; float: right; margin-top: -30%; }
 .flecha-anterior{ width: 15%; position: relative; left: -30%; float: left; margin-top: -30%; }
+.controlFooter .flecha-anterior{ width:40px; position: static; left: 0; float: none; margin-top: 0;
+display: inline-block;}
 .btn-cerrar{ width: 60px; display: inline-block; float: right; }
 .colombianoCampesino{ background: url("../images/escena9/colombiano-campesino-01.svg") no-repeat; }
 .colombianoCampesino:hover{ background: url("../images/escena9/colombiano-campesino-over-01.svg") no-repeat; }
@@ -455,10 +457,10 @@ background: url("../images/casa/servicios/servicio-publico-1-luz-lampara.svg") n
 .diploma .controlFooter{ max-height: 120px; bottom: 20%; }
 .diploma .controlFooter div{ height: auto; display: inline-block; }
 .diploma .controlFooter img{ height: 100%; width: 140px; }
-.contentSceneDiploma{ height: 100%; margin: 0 auto; background-size: contain; background-position: center 0;
-width: 100%; background: url("../images/diploma/marco-diplomaV2.svg") no-repeat;   }
-.bgDiploma{ height: 100%; margin: 0 auto; background-size: contain; background-position: center 0;
-width: 100%; background: url("../images/diploma/fondo-paisaje-diploma.svg") no-repeat;   }
-.solDiploma{ width: 120px; top: 20px; position: absolute; left: 10%; }
-.contentMarcoDiploma{ margin: 0 auto; font-size: 1.6em; line-height: 1.3em; color: #000;
-font-family: 'Gloria Hallelujah', cursive; width: 50%; padding-top: 13%; }
+.contentSceneDiploma{ height: 100%; margin: 0 auto; width: 100%;
+  background: url("../images/diploma/marco-diplomaV2.svg") no-repeat center center;   }
+.bgDiploma{ height: 100%; margin: 0 auto; width: 100%;
+  background: url("../images/diploma/fondo-paisaje-diploma.svg") no-repeat center center;   }
+.solDiploma{ width: 120px; top: 20px; position: absolute; left: 20%; }
+.contentMarcoDiploma{ margin: 0 auto; font-size: 1.4em; line-height: 1.3em; color: #000;
+font-family: 'Gloria Hallelujah', cursive; width: 36%; padding-top: 10%; }
