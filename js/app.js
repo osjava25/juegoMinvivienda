@@ -1,4 +1,4 @@
-currentScene="1";
+currentScene="7";
 selectedRegion='';
 urlImagenRegion="";
 urlImagenPersonaje="";
@@ -192,7 +192,7 @@ function closeAll()
 	$("#escena10").hide();
 	$("#regionAndina").hide();
 	$("#tiempo").hide();
-	$("#nivel1").hide();
+	$("#nivel").hide();
 	$("#region").hide();
 	$("#casa").hide();
 	$("#menuLateral").hide();
@@ -208,19 +208,26 @@ function initialize()
 	$('.btnJugar').click(function(){
 		btnJugarClick();
 	})
+	
+	$('.btnJugarE').click(function(){
+		currentScene="1";
+		alternateScene(currentScene);
+	})
+	
+	$('.btnFinal2').click(function(){
+		currentScene="1";
+		alternateScene(currentScene);
+	})
 
 	$('.btnJugar5').click(function(){
 		btnJugarClick();
 	})
 
-	$('.btnFinal2').click(function(){
+	$('.btnFinal1').click(function(){
 		printDiv();
 	})
 
-	$('.btnFinal1').click(function(){
-		alert('fin')
-	})
-
+	
 	$('.btnJugar2').click(function(){
 		showScene('casa,menuLateral,tiempo,nivel1,region,'+cssRegion);
 		elementosSiempreVisibles='casa,menuLateral,tiempo,nivel1,region,'+cssRegion;
@@ -306,7 +313,8 @@ function initialize()
 		cargarPersonajes();
 		fordward();
 		$("#tiempo").show();
-		$("#nivel1").show();
+		$("#nivel").removeClass('nivel1').addClass("nivel2");
+		$("#nivel").show();
 		$("#region").show();
 		startTime();
 	})
@@ -388,29 +396,29 @@ function cargarPersonajes()
 function initializePaintControls()
 {
 	$('.btnColorVerde').click(function(){
-		$('#habitacion1').removeClass("habitacionCasa1").removeClass("habitacionCasa1Azul").removeClass("habitacionCasa1Verde").removeClass("habitacionCasa1Rosado").addClass('habitacionCasa1Verde');
-		$('#habitacion2').removeClass("habitacionCasa2").removeClass("habitacionCasa2Azul").removeClass("habitacionCasa2Verde").removeClass("habitacionCasa2Rosado").addClass('habitacionCasa2Verde');
-		$('#habitacion3').removeClass("habitacionCasa3").removeClass("habitacionCasa3Azul").removeClass("habitacionCasa3Verde").removeClass("habitacionCasa3Rosado").addClass('habitacionCasa3Verde');
-		$('#habitacion4').removeClass("habitacionCasa4").removeClass("habitacionCasa4Azul").removeClass("habitacionCasa4Verde").removeClass("habitacionCasa4Rosado").addClass('habitacionCasa4Verde');
+		$('#habitacion1').removeClass("habitacionCasa1").removeClass("habitacionCasa1Blanca").removeClass("habitacionCasa1Azul").removeClass("habitacionCasa1Verde").removeClass("habitacionCasa1Rosado").addClass('habitacionCasa1Verde');
+		$('#habitacion2').removeClass("habitacionCasa2").removeClass("habitacionCasa2Blanca").removeClass("habitacionCasa2Azul").removeClass("habitacionCasa2Verde").removeClass("habitacionCasa2Rosado").addClass('habitacionCasa2Verde');
+		$('#habitacion3').removeClass("habitacionCasa3").removeClass("habitacionCasa3Blanca").removeClass("habitacionCasa3Azul").removeClass("habitacionCasa3Verde").removeClass("habitacionCasa3Rosado").addClass('habitacionCasa3Verde');
+		$('#habitacion4').removeClass("habitacionCasa4").removeClass("habitacionCasa4Blanca").removeClass("habitacionCasa4Azul").removeClass("habitacionCasa4Verde").removeClass("habitacionCasa4Rosado").addClass('habitacionCasa4Verde');
 		pinturaLlena=true;
 		showScene('mensajeColor');
 		validarFinJuego();
 
 	});
 	$('.btnColorAzul').click(function(){
-		$('#habitacion1').removeClass("habitacionCasa1").removeClass("habitacionCasa1Azul").removeClass("habitacionCasa1Verde").removeClass("habitacionCasa1Rosado").addClass('habitacionCasa1Azul');
-		$('#habitacion2').removeClass("habitacionCasa2").removeClass("habitacionCasa2Azul").removeClass("habitacionCasa2Verde").removeClass("habitacionCasa2Rosado").addClass('habitacionCasa2Azul');
-		$('#habitacion3').removeClass("habitacionCasa3").removeClass("habitacionCasa3Azul").removeClass("habitacionCasa3Verde").removeClass("habitacionCasa3Rosado").addClass('habitacionCasa3Azul');
-		$('#habitacion4').removeClass("habitacionCasa4").removeClass("habitacionCasa4Azul").removeClass("habitacionCasa4Verde").removeClass("habitacionCasa4Rosado").addClass('habitacionCasa4Azul');
+		$('#habitacion1').removeClass("habitacionCasa1").removeClass("habitacionCasa1Blanca").removeClass("habitacionCasa1Azul").removeClass("habitacionCasa1Verde").removeClass("habitacionCasa1Rosado").addClass('habitacionCasa1Azul');
+		$('#habitacion2').removeClass("habitacionCasa2").removeClass("habitacionCasa2Blanca").removeClass("habitacionCasa2Azul").removeClass("habitacionCasa2Verde").removeClass("habitacionCasa2Rosado").addClass('habitacionCasa2Azul');
+		$('#habitacion3').removeClass("habitacionCasa3").removeClass("habitacionCasa3Blanca").removeClass("habitacionCasa3Azul").removeClass("habitacionCasa3Verde").removeClass("habitacionCasa3Rosado").addClass('habitacionCasa3Azul');
+		$('#habitacion4').removeClass("habitacionCasa4").removeClass("habitacionCasa4Blanca").removeClass("habitacionCasa4Azul").removeClass("habitacionCasa4Verde").removeClass("habitacionCasa4Rosado").addClass('habitacionCasa4Azul');
 		pinturaLlena=true;
 		showScene('mensajeColor');
 		validarFinJuego();
 	});
 	$('.btnColorRosado').click(function(){
-		$('#habitacion1').removeClass("habitacionCasa1").removeClass("habitacionCasa1Azul").removeClass("habitacionCasa1Verde").removeClass("habitacionCasa1Rosado").addClass('habitacionCasa1Rosado');
-		$('#habitacion2').removeClass("habitacionCasa2").removeClass("habitacionCasa2Azul").removeClass("habitacionCasa2Verde").removeClass("habitacionCasa2Rosado").addClass('habitacionCasa2Rosado');
-		$('#habitacion3').removeClass("habitacionCasa3").removeClass("habitacionCasa3Azul").removeClass("habitacionCasa3Verde").removeClass("habitacionCasa3Rosado").addClass('habitacionCasa3Rosado');
-		$('#habitacion4').removeClass("habitacionCasa4").removeClass("habitacionCasa4Azul").removeClass("habitacionCasa4Verde").removeClass("habitacionCasa4Rosado").addClass('habitacionCasa4Rosado');
+		$('#habitacion1').removeClass("habitacionCasa1").removeClass("habitacionCasa1Blanca").removeClass("habitacionCasa1Azul").removeClass("habitacionCasa1Verde").removeClass("habitacionCasa1Rosado").addClass('habitacionCasa1Rosado');
+		$('#habitacion2').removeClass("habitacionCasa2").removeClass("habitacionCasa2Blanca").removeClass("habitacionCasa2Azul").removeClass("habitacionCasa2Verde").removeClass("habitacionCasa2Rosado").addClass('habitacionCasa2Rosado');
+		$('#habitacion3').removeClass("habitacionCasa3").removeClass("habitacionCasa3Blanca").removeClass("habitacionCasa3Azul").removeClass("habitacionCasa3Verde").removeClass("habitacionCasa3Rosado").addClass('habitacionCasa3Rosado');
+		$('#habitacion4').removeClass("habitacionCasa4").removeClass("habitacionCasa4Blanca").removeClass("habitacionCasa4Azul").removeClass("habitacionCasa4Verde").removeClass("habitacionCasa4Rosado").addClass('habitacionCasa4Rosado');
 		pinturaLlena=true;
 		showScene('mensajeColor');
 		validarFinJuego();
@@ -677,6 +685,7 @@ function startTime()
 function finTiempoJuego()
 {
 	showScene('mensajeErrorTiempo');
+    
 }
 
 function pause()
@@ -724,26 +733,30 @@ function fordward()
 	    case "4F":
 			currentScene="7";
 			alternateScene(currentScene);
+			$("#nivel").removeClass().addClass("iconControlSupIzq nivel1");
+			$("#nivel").show();
 			break;
         case "7":
 			currentScene="8";
 			alternateScene(currentScene);
 			$("#tiempo").show();
-			$("#nivel1").show();
+			$("#nivel").removeClass().addClass("iconControlSupIzq nivel2");
+			$("#nivel").show();
+			
 			$("#region").show();
 			break;
         case "8":
 			currentScene="9";
 			alternateScene(currentScene);
 			$("#tiempo").show();
-			$("#nivel1").show();
+			$("#nivel").show();
 			$("#region").show();
 			break;
         case "9":
 			currentScene="10";
 			alternateScene(currentScene);
 			$("#tiempo").show();
-			$("#nivel1").show();
+			$("#nivel").show();
 			$("#region").show();
 
 			break;
@@ -751,35 +764,39 @@ function fordward()
 			currentScene="11";
 			alternateScene(currentScene);
 			$("#tiempo").show();
-			$("#nivel1").show();
+			$("#nivel").show();
 			$("#region").show();
 			break;
 		case "11":
 			currentScene="12";
 			alternateScene(currentScene);
 			$("#tiempo").show();
-			$("#nivel1").show();
+			$("#nivel").removeClass().addClass("iconControlSupIzq nivel3");
+			$("#nivel").show();
 			$("#region").show();
 			break;
 		case "12":
 			currentScene="13";
 			alternateScene(currentScene);
 			$("#tiempo").hide();
-			$("#nivel1").show();
+			$("#nivel").removeClass().addClass("iconControlSupIzq nivel3");
+			$("#nivel").show();
 			$("#region").show();
 			break;
 		case "13":
 			currentScene="14";
 			alternateScene(currentScene);
 			$("#tiempo").hide();
-			$("#nivel1").show();
+			$("#nivel").removeClass().addClass("iconControlSupIzq nivel3");
+			$("#nivel").show();
 			$("#region").show();
 			break;
 		case "14":
 			scene_="diploma";
 			showScene(scene_);
 			$("#tiempo").hide();
-			$("#nivel1").show();
+			$("#nivel").removeClass().addClass("iconControlSupIzq nivel3");
+			$("#nivel").show();
 			$("#region").show();
 			break;
 	}
@@ -844,20 +861,14 @@ function btnJugarClick()
 	fordward();
 }
 
-function printDiv()
-{
+function printDiv() {
 
-  var divToPrint=document.getElementById('casa');
-
-  var newWin=window.open('','Print-Window');
-
-  newWin.document.open();
-
-  newWin.document.write('<html><body onload="window.print()">'+divToPrint.innerHTML+'</body></html>');
-
-  newWin.document.close();
-
-  setTimeout(function(){newWin.close();},10);
+    var printContent = document.getElementById("print");
+    var printWindow = window.open("");                
+    printWindow.document.write(printContent.innerHTML);
+    printWindow.document.write("<script src=\'http://code.jquery.com/jquery-1.10.1.min.js\'><\/script>");
+    printWindow.document.write("<script>$(window).load(function(){ print(); close(); });<\/script>");
+    printWindow.document.close();          
 
 }
 
@@ -897,7 +908,7 @@ function alternateScene(sceneNumber)
 	$("#mensajeFelicitacion").hide();
 	$("#regionAndina").hide();
 	$("#tiempo").hide();
-	$("#nivel1").hide();
+	$("#nivel").hide();
 	$("#region").hide();
 	$("#casa").hide();
 	$("#menuLateral").hide();
@@ -947,7 +958,7 @@ function showScene(scenes)
 
 	$("#regionAndina").hide();
 	$("#tiempo").hide();
-	$("#nivel1").hide();
+	$("#nivel").hide();
 	$("#region").hide();
 	$("#casa").hide();
 	$("#menuLateral").hide();
