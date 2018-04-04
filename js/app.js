@@ -1,4 +1,4 @@
-currentScene="7";
+currentScene="1";
 selectedRegion='';
 urlImagenRegion="";
 urlImagenPersonaje="";
@@ -22,6 +22,22 @@ $( document ).ready(function() {
 	alternateScene(currentScene);
 	intro('.btnJugar')
 
+});
+
+
+$(document).ready(function() {
+  var playing = true;
+
+  $('.sonido').click(function() {
+      $(this).toggleClass("activeSonido");
+      if (playing == false) {
+          document.getElementById('player').play();
+          playing = true;
+      } else {
+        document.getElementById('player').pause();
+        playing = false;
+      }
+  });
 });
 
 function generarNombreImagenXRegion()
@@ -260,12 +276,12 @@ function initialize()
 	})
 
 	$('.pasos').click(function(){
-		
+
 		showScene('pasos');
 	})
-	
+
 	$('#btnCerrarPasos').click(function(){
-		
+
 		alternateScene(currentScene);
 	})
 

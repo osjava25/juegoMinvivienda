@@ -32,6 +32,7 @@ font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 .pasos:hover{ background: url("../images/controlesSup/boton-1-submenu-pasos-over.svg") no-repeat;}
 .pausa:hover{ background: url("../images/controlesSup/boton-2-submenu-pausa-over.svg") no-repeat;}
 .sonido:hover{ background: url("../images/controlesSup/boton-3-submenu-sonido-over.svg") no-repeat;}
+.activeSonido{ background: url("../images/controlesSup/boton-3-submenu-sonido-over.svg") no-repeat;}
 .compartir:hover{ background: url("../images/controlesSup/boton-4-submenu-compartir-over.svg") no-repeat;}
 .tiempo{ background: url("../images/controlesSup/reloj-tiempo.svg") no-repeat; width: 100px; height: 40px;
  line-height: 40px; color:#000; padding-left: 40px; font-family: 'Gloria Hallelujah', cursive; font-weight: 600; }
@@ -72,8 +73,7 @@ background-size: cover; background-position: center; }
 background-size: cover; background-position-y: center; }
 .bgSceneRojo{ height: 100%; width: 100%; background-size: cover; background-position-y: center;
 background-image: url("../images/casa/mensajes/fondo-rojo-tiempo-agotado.svg"); }
-.bgSceneMorado{ height: 100%; width: 100%; background-image: url("../images/diploma/bg-marco-diploma.svg");
-background-size: cover; background-position-y: center; }
+.bgSceneMorado{ height: 100%; width: 100%; background:#5d1230; }
 .bgDestelloAzul{ height: 100%; width: 100%; background-image: url("../images/bg/destellos.svg");
 background-size: 70%; background-position: center; background-repeat: no-repeat; }
 .bgDestelloVerde{ height: 100%; width: 100%; background-image: url("../images/bg/destellos.svg");
