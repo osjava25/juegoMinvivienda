@@ -890,7 +890,7 @@ function printDiv() {
     var printContent = document.getElementById("print");
     var printWindow = window.open("");
     printWindow.document.write(printContent.innerHTML);
-    printWindow.document.write("<script src=\'http://code.jquery.com/jquery-1.10.1.min.js\'><\/script>");
+    printWindow.document.write("<script src=\'https://code.jquery.com/jquery-1.10.1.min.js\'><\/script>");
     printWindow.document.write("<script>$(window).load(function(){ print(); close(); });<\/script>");
     printWindow.document.close();
 
