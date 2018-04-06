@@ -1,4 +1,4 @@
-currentScene="1";
+currentScene="7";
 selectedRegion='';
 urlImagenRegion="";
 urlImagenPersonaje="";
@@ -226,14 +226,14 @@ function initialize()
 	})
 
 	$('.btnJugarE').click(function(){
-		currentScene="1";
-		alternateScene(currentScene);
+		/*currentScene="1";
+		alternateScene(currentScene);*/
 		location.href="home.html";
 	})
 
 	$('.btnFinal2').click(function(){
-		currentScene="1";
-		alternateScene(currentScene);
+		/*currentScene="1";
+		alternateScene(currentScene);*/
 		location.href="home.html";
 	})
 
@@ -299,13 +299,14 @@ function initialize()
 	})
 
 	$('#reiniciar').click(function(){
-		currentScene="1";
-		alternateScene(currentScene);
+		/*currentScene="1";
+		alternateScene(currentScene);*/
 		location.href="home.html";
 	})
 
 	$('#salir').click(function(){
-		closeWindow();
+		//closeWindow();
+		location.href="home.html";
 	})
 
 	$('#personaje1').click(function(){
