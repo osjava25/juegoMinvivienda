@@ -289,6 +289,8 @@ background: url("../images/escena11/menu/menu-principal-5-servicios-publicos.svg
 .iconServicios:hover{ width: 60px; height: 60px;
 background: url("../images/escena11/menu/menu-principal-5-servicios-publicos-over.svg") no-repeat;}
 .iconServicios:hover > .menuServicios{ display: block;}
+.iconSiguiente{ background: url("../images/escena11/menu/boton-avanzar.svg") no-repeat; width: 60px; height: 60px;
+cursor: hand; cursor: pointer; }
 .menuHabitacion{ height: 90px; width: 300px; position: absolute; left: 60px; top: -30px; display: none;
 background: url("../images/escena11/menu/menu-principal-contenedor-1-habitaciones.svg") no-repeat; }
 .btnHabitacion{ height: 40px; width: 40px; display: inline-block; margin: 35px 0 0 10px;
