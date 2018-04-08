@@ -311,18 +311,24 @@ function initialize()
 
 	$('#personaje1').click(function(){
 		selectedCharacter=$(this).attr('title');
+		$("#nivel").removeClass().addClass("iconControlSupIzq nivel2");
+		$("#nivel").show();
 		generarPersonaje();
 		fordward();
 	})
 
 	$('#personaje2').click(function(){
 		selectedCharacter=$(this).attr('title');
+		$("#nivel").removeClass().addClass("iconControlSupIzq nivel2");
+		$("#nivel").show();
 		generarPersonaje();
 		fordward();
 	})
 
 	$('#personaje3').click(function(){
 		selectedCharacter=$(this).attr('title');
+		$("#nivel").removeClass().addClass("iconControlSupIzq nivel2");
+		$("#nivel").show();
 		generarPersonaje();
 		fordward();
 	})
@@ -338,7 +344,7 @@ function initialize()
 		cargarPersonajes();
 		fordward();
 		$("#tiempo").show();
-		$("#nivel").removeClass('nivel1').addClass("nivel2");
+		$("#nivel").removeClass().addClass("iconControlSupIzq nivel1");
 		$("#nivel").show();
 		$("#region").show();
 		startTime();
@@ -420,134 +426,225 @@ function cargarPersonajes()
 
 function initializePaintControls()
 {
-	$('.btnColorVerde').click(function(){
-		$('#habitacion1').removeClass("habitacionCasa1").removeClass("habitacionCasa1Blanca").removeClass("habitacionCasa1Azul").removeClass("habitacionCasa1Verde").removeClass("habitacionCasa1Rosado").addClass('habitacionCasa1Verde');
-		$('#habitacion2').removeClass("habitacionCasa2").removeClass("habitacionCasa2Blanca").removeClass("habitacionCasa2Azul").removeClass("habitacionCasa2Verde").removeClass("habitacionCasa2Rosado").addClass('habitacionCasa2Verde');
-		$('#habitacion3').removeClass("habitacionCasa3").removeClass("habitacionCasa3Blanca").removeClass("habitacionCasa3Azul").removeClass("habitacionCasa3Verde").removeClass("habitacionCasa3Rosado").addClass('habitacionCasa3Verde');
-		$('#habitacion4').removeClass("habitacionCasa4").removeClass("habitacionCasa4Blanca").removeClass("habitacionCasa4Azul").removeClass("habitacionCasa4Verde").removeClass("habitacionCasa4Rosado").addClass('habitacionCasa4Verde');
-		pinturaLlena=true;
-		showScene('mensajeColor');
-		validarFinJuego();
-
-	});
-	$('.btnColorAzul').click(function(){
-		$('#habitacion1').removeClass("habitacionCasa1").removeClass("habitacionCasa1Blanca").removeClass("habitacionCasa1Azul").removeClass("habitacionCasa1Verde").removeClass("habitacionCasa1Rosado").addClass('habitacionCasa1Azul');
-		$('#habitacion2').removeClass("habitacionCasa2").removeClass("habitacionCasa2Blanca").removeClass("habitacionCasa2Azul").removeClass("habitacionCasa2Verde").removeClass("habitacionCasa2Rosado").addClass('habitacionCasa2Azul');
-		$('#habitacion3').removeClass("habitacionCasa3").removeClass("habitacionCasa3Blanca").removeClass("habitacionCasa3Azul").removeClass("habitacionCasa3Verde").removeClass("habitacionCasa3Rosado").addClass('habitacionCasa3Azul');
-		$('#habitacion4').removeClass("habitacionCasa4").removeClass("habitacionCasa4Blanca").removeClass("habitacionCasa4Azul").removeClass("habitacionCasa4Verde").removeClass("habitacionCasa4Rosado").addClass('habitacionCasa4Azul');
-		pinturaLlena=true;
-		showScene('mensajeColor');
-		validarFinJuego();
-	});
-	$('.btnColorRosado').click(function(){
-		$('#habitacion1').removeClass("habitacionCasa1").removeClass("habitacionCasa1Blanca").removeClass("habitacionCasa1Azul").removeClass("habitacionCasa1Verde").removeClass("habitacionCasa1Rosado").addClass('habitacionCasa1Rosado');
-		$('#habitacion2').removeClass("habitacionCasa2").removeClass("habitacionCasa2Blanca").removeClass("habitacionCasa2Azul").removeClass("habitacionCasa2Verde").removeClass("habitacionCasa2Rosado").addClass('habitacionCasa2Rosado');
-		$('#habitacion3').removeClass("habitacionCasa3").removeClass("habitacionCasa3Blanca").removeClass("habitacionCasa3Azul").removeClass("habitacionCasa3Verde").removeClass("habitacionCasa3Rosado").addClass('habitacionCasa3Rosado');
-		$('#habitacion4').removeClass("habitacionCasa4").removeClass("habitacionCasa4Blanca").removeClass("habitacionCasa4Azul").removeClass("habitacionCasa4Verde").removeClass("habitacionCasa4Rosado").addClass('habitacionCasa4Rosado');
-		pinturaLlena=true;
-		showScene('mensajeColor');
-		validarFinJuego();
-	});
+	
+		$('.btnColorVerde').click(function(){
+			if(salaLlena&&cocinaLlena&&habitacionLlena&&banoLleno)
+			{
+				$('#habitacion1').removeClass("habitacionCasa1").removeClass("habitacionCasa1Blanca").removeClass("habitacionCasa1Azul").removeClass("habitacionCasa1Verde").removeClass("habitacionCasa1Rosado").addClass('habitacionCasa1Verde');
+				$('#habitacion2').removeClass("habitacionCasa2").removeClass("habitacionCasa2Blanca").removeClass("habitacionCasa2Azul").removeClass("habitacionCasa2Verde").removeClass("habitacionCasa2Rosado").addClass('habitacionCasa2Verde');
+				$('#habitacion3').removeClass("habitacionCasa3").removeClass("habitacionCasa3Blanca").removeClass("habitacionCasa3Azul").removeClass("habitacionCasa3Verde").removeClass("habitacionCasa3Rosado").addClass('habitacionCasa3Verde');
+				$('#habitacion4').removeClass("habitacionCasa4").removeClass("habitacionCasa4Blanca").removeClass("habitacionCasa4Azul").removeClass("habitacionCasa4Verde").removeClass("habitacionCasa4Rosado").addClass('habitacionCasa4Verde');
+				pinturaLlena=true;
+				showScene('mensajeColor');
+				validarFinJuego();
+			}
+			else
+			{
+				showScene('mensajeError');
+			}
+		});
+		$('.btnColorAzul').click(function(){
+			if(salaLlena&&cocinaLlena&&habitacionLlena&&banoLleno)
+			{
+				$('#habitacion1').removeClass("habitacionCasa1").removeClass("habitacionCasa1Blanca").removeClass("habitacionCasa1Azul").removeClass("habitacionCasa1Verde").removeClass("habitacionCasa1Rosado").addClass('habitacionCasa1Azul');
+				$('#habitacion2').removeClass("habitacionCasa2").removeClass("habitacionCasa2Blanca").removeClass("habitacionCasa2Azul").removeClass("habitacionCasa2Verde").removeClass("habitacionCasa2Rosado").addClass('habitacionCasa2Azul');
+				$('#habitacion3').removeClass("habitacionCasa3").removeClass("habitacionCasa3Blanca").removeClass("habitacionCasa3Azul").removeClass("habitacionCasa3Verde").removeClass("habitacionCasa3Rosado").addClass('habitacionCasa3Azul');
+				$('#habitacion4').removeClass("habitacionCasa4").removeClass("habitacionCasa4Blanca").removeClass("habitacionCasa4Azul").removeClass("habitacionCasa4Verde").removeClass("habitacionCasa4Rosado").addClass('habitacionCasa4Azul');
+				pinturaLlena=true;
+				showScene('mensajeColor');
+				validarFinJuego();
+			}
+			else
+			{
+				showScene('mensajeError');
+			}
+		});
+		$('.btnColorRosado').click(function(){
+			if(salaLlena&&cocinaLlena&&habitacionLlena&&banoLleno)
+			{
+				$('#habitacion1').removeClass("habitacionCasa1").removeClass("habitacionCasa1Blanca").removeClass("habitacionCasa1Azul").removeClass("habitacionCasa1Verde").removeClass("habitacionCasa1Rosado").addClass('habitacionCasa1Rosado');
+				$('#habitacion2').removeClass("habitacionCasa2").removeClass("habitacionCasa2Blanca").removeClass("habitacionCasa2Azul").removeClass("habitacionCasa2Verde").removeClass("habitacionCasa2Rosado").addClass('habitacionCasa2Rosado');
+				$('#habitacion3').removeClass("habitacionCasa3").removeClass("habitacionCasa3Blanca").removeClass("habitacionCasa3Azul").removeClass("habitacionCasa3Verde").removeClass("habitacionCasa3Rosado").addClass('habitacionCasa3Rosado');
+				$('#habitacion4').removeClass("habitacionCasa4").removeClass("habitacionCasa4Blanca").removeClass("habitacionCasa4Azul").removeClass("habitacionCasa4Verde").removeClass("habitacionCasa4Rosado").addClass('habitacionCasa4Rosado');
+				pinturaLlena=true;
+				showScene('mensajeColor');
+				validarFinJuego();
+			}
+			else
+			{
+				showScene('mensajeError');
+			}
+		});
+	
 }
 
 function initializeWindowControls()
 {
-	$('.btnVentana1').click(function(){
-		$('#ventana1').removeClass("habitacionVentana1Ventana1").removeClass("habitacionVentana1Ventana2").removeClass("habitacionVentana1Ventana3").addClass('habitacionVentana1Ventana1');
-		$('#ventana2').removeClass("habitacionVentana2Ventana1").removeClass("habitacionVentana2Ventana2").removeClass("habitacionVentana2Ventana3").addClass('habitacionVentana2Ventana1');
-		$('#ventana3').removeClass("habitacionVentana3Ventana1").removeClass("habitacionVentana3Ventana2").removeClass("habitacionVentana3Ventana3").addClass('habitacionVentana3Ventana1');
-		$('#ventana4').removeClass("habitacionVentana4Ventana1").removeClass("habitacionVentana4Ventana2").removeClass("habitacionVentana4Ventana3").addClass('habitacionVentana4Ventana1');
-		$('#ventana1').show();
-		$('#ventana2').show();
-		$('#ventana3').show();
-		$('#ventana4').show();
-		ventanaLlena=true;
-		showScene('mensajeVentanas');
-		validarFinJuego();
-	});
-	$('.btnVentana2').click(function(){
-		$('#ventana1').removeClass("habitacionVentana1Ventana1").removeClass("habitacionVentana1Ventana2").removeClass("habitacionVentana1Ventana3").addClass('habitacionVentana1Ventana2');
-		$('#ventana2').removeClass("habitacionVentana2Ventana1").removeClass("habitacionVentana2Ventana2").removeClass("habitacionVentana2Ventana3").addClass('habitacionVentana2Ventana2');
-		$('#ventana3').removeClass("habitacionVentana3Ventana1").removeClass("habitacionVentana3Ventana2").removeClass("habitacionVentana3Ventana3").addClass('habitacionVentana3Ventana2');
-		$('#ventana4').removeClass("habitacionVentana4Ventana1").removeClass("habitacionVentana4Ventana2").removeClass("habitacionVentana4Ventana3").addClass('habitacionVentana4Ventana2');
-		$('#ventana1').show();
-		$('#ventana2').show();
-		$('#ventana3').show();
-		$('#ventana4').show();
-		ventanaLlena=true;
-		showScene('mensajeVentanas');
-		validarFinJuego();
-	});
-	$('.btnVentana3').click(function(){
-		$('#ventana1').removeClass("habitacionVentana1Ventana1").removeClass("habitacionVentana1Ventana2").removeClass("habitacionVentana1Ventana3").addClass('habitacionVentana1Ventana3');
-		$('#ventana2').removeClass("habitacionVentana2Ventana1").removeClass("habitacionVentana2Ventana2").removeClass("habitacionVentana2Ventana3").addClass('habitacionVentana2Ventana3');
-		$('#ventana3').removeClass("habitacionVentana3Ventana1").removeClass("habitacionVentana3Ventana2").removeClass("habitacionVentana3Ventana3").addClass('habitacionVentana3Ventana3');
-		$('#ventana4').removeClass("habitacionVentana4Ventana1").removeClass("habitacionVentana4Ventana2").removeClass("habitacionVentana4Ventana3").addClass('habitacionVentana4Ventana3');
-		$('#ventana1').show();
-		$('#ventana2').show();
-		$('#ventana3').show();
-		$('#ventana4').show();
-		ventanaLlena=true;
-		showScene('mensajeVentanas');
-		validarFinJuego();
-	});
+	
+		$('.btnVentana1').click(function(){
+			if(salaLlena&&cocinaLlena&&habitacionLlena&&banoLleno)
+			{
+				$('#ventana1').removeClass("habitacionVentana1Ventana1").removeClass("habitacionVentana1Ventana2").removeClass("habitacionVentana1Ventana3").addClass('habitacionVentana1Ventana1');
+				$('#ventana2').removeClass("habitacionVentana2Ventana1").removeClass("habitacionVentana2Ventana2").removeClass("habitacionVentana2Ventana3").addClass('habitacionVentana2Ventana1');
+				$('#ventana3').removeClass("habitacionVentana3Ventana1").removeClass("habitacionVentana3Ventana2").removeClass("habitacionVentana3Ventana3").addClass('habitacionVentana3Ventana1');
+				$('#ventana4').removeClass("habitacionVentana4Ventana1").removeClass("habitacionVentana4Ventana2").removeClass("habitacionVentana4Ventana3").addClass('habitacionVentana4Ventana1');
+				$('#ventana1').show();
+				$('#ventana2').show();
+				$('#ventana3').show();
+				$('#ventana4').show();
+				ventanaLlena=true;
+				showScene('mensajeVentanas');
+				validarFinJuego();
+			}
+			else
+			{
+				showScene('mensajeError');
+			}
+		});
+		$('.btnVentana2').click(function(){
+			if(salaLlena&&cocinaLlena&&habitacionLlena&&banoLleno)
+			{
+				$('#ventana1').removeClass("habitacionVentana1Ventana1").removeClass("habitacionVentana1Ventana2").removeClass("habitacionVentana1Ventana3").addClass('habitacionVentana1Ventana2');
+				$('#ventana2').removeClass("habitacionVentana2Ventana1").removeClass("habitacionVentana2Ventana2").removeClass("habitacionVentana2Ventana3").addClass('habitacionVentana2Ventana2');
+				$('#ventana3').removeClass("habitacionVentana3Ventana1").removeClass("habitacionVentana3Ventana2").removeClass("habitacionVentana3Ventana3").addClass('habitacionVentana3Ventana2');
+				$('#ventana4').removeClass("habitacionVentana4Ventana1").removeClass("habitacionVentana4Ventana2").removeClass("habitacionVentana4Ventana3").addClass('habitacionVentana4Ventana2');
+				$('#ventana1').show();
+				$('#ventana2').show();
+				$('#ventana3').show();
+				$('#ventana4').show();
+				ventanaLlena=true;
+				showScene('mensajeVentanas');
+				validarFinJuego();
+			}
+			else
+			{
+				showScene('mensajeError');
+			}
+		});
+		$('.btnVentana3').click(function(){
+			if(salaLlena&&cocinaLlena&&habitacionLlena&&banoLleno)
+			{
+				$('#ventana1').removeClass("habitacionVentana1Ventana1").removeClass("habitacionVentana1Ventana2").removeClass("habitacionVentana1Ventana3").addClass('habitacionVentana1Ventana3');
+				$('#ventana2').removeClass("habitacionVentana2Ventana1").removeClass("habitacionVentana2Ventana2").removeClass("habitacionVentana2Ventana3").addClass('habitacionVentana2Ventana3');
+				$('#ventana3').removeClass("habitacionVentana3Ventana1").removeClass("habitacionVentana3Ventana2").removeClass("habitacionVentana3Ventana3").addClass('habitacionVentana3Ventana3');
+				$('#ventana4').removeClass("habitacionVentana4Ventana1").removeClass("habitacionVentana4Ventana2").removeClass("habitacionVentana4Ventana3").addClass('habitacionVentana4Ventana3');
+				$('#ventana1').show();
+				$('#ventana2').show();
+				$('#ventana3').show();
+				$('#ventana4').show();
+				ventanaLlena=true;
+				showScene('mensajeVentanas');
+				validarFinJuego();
+			}
+			else
+			{
+				showScene('mensajeError');
+			}
+		});
+	
 }
 
 function initializeRoofControls()
 {
-	$('.btnTecho1').click(function(){
-		techoLleno=true;
-		$('#techo').removeClass("techo1").removeClass("techo2").removeClass("techo3").addClass('techo1');
-		$('#techo').show();
-		showScene('mensajeTecho');
-		validarFinJuego();
-	});
-	$('.btnTecho2').click(function(){
-		$('#techo').removeClass("techo1").removeClass("techo2").removeClass("techo3").addClass('techo2');
-		$('#techo').show();
-		techoLleno=true;
-		showScene('mensajeTecho');
-		validarFinJuego();
-	});
-	$('.btnTecho3').click(function(){
-		$('#techo').removeClass("techo1").removeClass("techo2").removeClass("techo3").addClass('techo3');
-		$('#techo').show();
-		techoLleno=true;
-		showScene('mensajeTecho');
-		validarFinJuego();
-	});
+	
+		$('.btnTecho1').click(function(){
+			if(salaLlena&&cocinaLlena&&habitacionLlena&&banoLleno)
+			{
+				techoLleno=true;
+				$('#techo').removeClass("techo1").removeClass("techo2").removeClass("techo3").addClass('techo1');
+				$('#techo').show();
+				showScene('mensajeTecho');
+				validarFinJuego();
+			}
+			else
+			{
+				showScene('mensajeError');
+			}
+		});
+		$('.btnTecho2').click(function(){
+			if(salaLlena&&cocinaLlena&&habitacionLlena&&banoLleno)
+			{
+				$('#techo').removeClass("techo1").removeClass("techo2").removeClass("techo3").addClass('techo2');
+				$('#techo').show();
+				techoLleno=true;
+				showScene('mensajeTecho');
+				validarFinJuego();
+			}
+			else
+			{
+				showScene('mensajeError');
+			}
+		});
+		$('.btnTecho3').click(function(){
+			if(salaLlena&&cocinaLlena&&habitacionLlena&&banoLleno)
+			{
+				$('#techo').removeClass("techo1").removeClass("techo2").removeClass("techo3").addClass('techo3');
+				$('#techo').show();
+				techoLleno=true;
+				showScene('mensajeTecho');
+				validarFinJuego();
+			}
+			else
+			{
+				showScene('mensajeError');
+			}
+		});
+	
 }
 
 function initializeServiceControls()
 {
-	$('.btnServicio1').click(function(){
+	
+		$('.btnServicio1').click(function(){
+			if(salaLlena&&cocinaLlena&&habitacionLlena&&banoLleno)
+			{
+				$('#luz1').show();
+				$('#luz2').show();
+				$('#luz3').show();
+				$('#luz4').show();
+				$('#tv1').show();
+				$('#tv2').show();
+				luzLlena =true;
+				
+				showScene('mensajeLuz');
+				validarFinJuego();
+			}
+			else
+			{
+				showScene('mensajeError');
+			}
+		});
+		$('.btnServicio2').click(function(){
+			if(salaLlena&&cocinaLlena&&habitacionLlena&&banoLleno)
+			{
+				$('#agua1').show();
+				$('#agua2').show();
+				$('#agua3').show();
+				$('#agua4').show();
 
-		$('#luz1').show();
-		$('#luz2').show();
-		$('#luz3').show();
-		$('#luz4').show();
-		$('#tv1').show();
-		$('#tv2').show();
-		luzLlena =true;
-		showScene('mensajeLuz');
-		validarFinJuego();
-	});
-	$('.btnServicio2').click(function(){
-		$('#agua1').show();
-		$('#agua2').show();
-		$('#agua3').show();
-		$('#agua4').show();
-
-		aguaLlena =true;
-		showScene('mensajeAgua');
-		validarFinJuego();
-	});
-	$('.btnServicio3').click(function(){
-		$('#acueducto').show();
-		showScene('mensajeAlcantarillado');
-		servicioLleno=true;
-		validarFinJuego();
-	});
+				aguaLlena =true;
+				showScene('mensajeAgua');
+				validarFinJuego();
+			}
+			else
+			{
+				showScene('mensajeError');
+			}
+		});
+		$('.btnServicio3').click(function(){
+			if(salaLlena&&cocinaLlena&&habitacionLlena&&banoLleno)
+			{
+				$('#acueducto').show();
+				showScene('mensajeAlcantarillado');
+				servicioLleno=true;
+				validarFinJuego();
+			}
+			else
+			{
+				showScene('mensajeError');
+			}
+		});
+	
 }
 
 function initializeDragNDrop()
@@ -673,11 +770,35 @@ function mostrarMensajeDnD(elemento, tipo)
 
 function validarFinJuego()
 {
+	if(habitacionLlena==true && banoLleno==true && cocinaLlena==true && salaLlena==true && ventanaLlena==true && techoLleno==true && pinturaLlena==true && luzLlena==false&& aguaLlena==false&&servicioLleno==false)
+	{
+		$("#nivel").removeClass().addClass("iconControlSupIzq nivel3");
+		$("#nivel").show();
+	}
+	if(habitacionLlena==true && banoLleno==true && cocinaLlena==true && salaLlena==true && ventanaLlena==true && techoLleno==true && pinturaLlena==true && luzLlena==true&& aguaLlena==false&&servicioLleno==false)
+	{
+		$("#nivel").removeClass().addClass("iconControlSupIzq nivel4");
+		$("#nivel").show();
+	}
+	if(habitacionLlena==true && banoLleno==true && cocinaLlena==true && salaLlena==true && ventanaLlena==true && techoLleno==true && pinturaLlena==true && luzLlena==true&& aguaLlena==true&&servicioLleno==false)
+	{
+		$("#nivel").removeClass().addClass("iconControlSupIzq nivel5");
+		$("#nivel").show();
+	}
+	if(habitacionLlena==true && banoLleno==true && cocinaLlena==true && salaLlena==true && ventanaLlena==true && techoLleno==true && pinturaLlena==true && luzLlena==true&& aguaLlena==true&&servicioLleno==true)
+	{
+		$("#nivel").removeClass().addClass("iconControlSupIzq nivel6");
+		$("#nivel").show();
+	}
 	if(habitacionLlena==true && banoLleno==true && cocinaLlena==true && salaLlena==true && ventanaLlena==true && techoLleno==true && pinturaLlena==true && luzLlena==true&& aguaLlena==true&&servicioLleno==true)
 	{
 		//alert('Juego terminado.')
 		timerX.pause();
 		showScene('mensajeFelicitacion');
+
+		$("#nivel").removeClass().addClass("iconControlSupIzq nivel6");
+		$("#nivel").show();
+	
 	}
 }
 
@@ -765,7 +886,7 @@ function fordward()
 			currentScene="8";
 			alternateScene(currentScene);
 			$("#tiempo").hide();
-			$("#nivel").removeClass().addClass("iconControlSupIzq nivel2");
+			$("#nivel").removeClass().addClass("iconControlSupIzq nivel1");
 			$("#nivel").show();
 
 			$("#region").show();
@@ -774,13 +895,16 @@ function fordward()
 			currentScene="9";
 			alternateScene(currentScene);
 			$("#tiempo").show();
+			$("#nivel").removeClass().addClass("iconControlSupIzq nivel1");
 			$("#nivel").show();
+			
 			$("#region").show();
 			break;
         case "9":
 			currentScene="10";
 			alternateScene(currentScene);
 			$("#tiempo").show();
+			$("#nivel").removeClass().addClass("iconControlSupIzq nivel2");
 			$("#nivel").show();
 			$("#region").show();
 
@@ -789,6 +913,7 @@ function fordward()
 			currentScene="11";
 			alternateScene(currentScene);
 			$("#tiempo").show();
+			$("#nivel").removeClass().addClass("iconControlSupIzq nivel2");
 			$("#nivel").show();
 			$("#region").show();
 			break;
@@ -796,7 +921,7 @@ function fordward()
 			currentScene="12";
 			alternateScene(currentScene);
 			$("#tiempo").show();
-			$("#nivel").removeClass().addClass("iconControlSupIzq nivel3");
+			$("#nivel").removeClass().addClass("iconControlSupIzq nivel6");
 			$("#nivel").show();
 			$("#region").show();
 			break;
@@ -804,7 +929,7 @@ function fordward()
 			currentScene="13";
 			alternateScene(currentScene);
 			$("#tiempo").hide();
-			$("#nivel").removeClass().addClass("iconControlSupIzq nivel3");
+			$("#nivel").removeClass().addClass("iconControlSupIzq nivel6");
 			$("#nivel").show();
 			$("#region").show();
 			break;
@@ -812,7 +937,7 @@ function fordward()
 			currentScene="14";
 			alternateScene(currentScene);
 			$("#tiempo").hide();
-			$("#nivel").removeClass().addClass("iconControlSupIzq nivel3");
+			$("#nivel").removeClass().addClass("iconControlSupIzq nivel6");
 			$("#nivel").hide();
 			$("#region").hide();
 			break;
@@ -820,7 +945,7 @@ function fordward()
 			scene_="diploma";
 			showScene(scene_);
 			$("#tiempo").hide();
-			$("#nivel").removeClass().addClass("iconControlSupIzq nivel3");
+			$("#nivel").removeClass().addClass("iconControlSupIzq nivel6");
 			$("#nivel").hide();
 			$("#region").hide();
 			break;
@@ -917,6 +1042,7 @@ function alternateScene(sceneNumber)
 	$("#escena13").hide();
 	$("#escena14").hide();
 	$("#diploma").hide();
+	$("#mensajeFalta").hide();
 $("#pasos").hide();
 	$("#mensajeHabitacion").hide();
 	$("#mensajeBano").hide();
@@ -965,6 +1091,7 @@ function showScene(scenes)
 	$("#escena13").hide();
 	$("#escena14").hide();
 	$("#diploma").hide();
+	$("#mensajeFalta").hide();
 $("#pasos").hide();
 	$("#mensajeHabitacion").hide();
 	$("#mensajeBano").hide();
@@ -1005,6 +1132,8 @@ function closeWindow(){
     var newWindow = window.open('', '_self', ''); //open the current window
     window.close(location.href);
 }
+
+
 
 function InvervalTimer(callback, interval) {
 	var timerId, startTime, remaining = 0;
