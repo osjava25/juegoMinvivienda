@@ -251,9 +251,9 @@ function initialize()
 		elementosSiempreVisibles='casa,menuLateral,tiempo,nivel,region,'+cssRegion;
 
 	})
-	
+
 	$('.iconSiguiente').click(function(){
-		
+
 		if(habitacionLlena==true && banoLleno==true && cocinaLlena==true && salaLlena==true && ventanaLlena==true && techoLleno==true && pinturaLlena==true && luzLlena==true&& aguaLlena==true&&servicioLleno==true)
 		{
 			//alert('Juego terminado.')
@@ -262,7 +262,7 @@ function initialize()
 
 			$("#nivel").removeClass().addClass("iconControlSupIzq nivel6");
 			$("#nivel").show();
-		
+
 		}
 		else
 		{
@@ -444,7 +444,7 @@ function cargarPersonajes()
 
 function initializePaintControls()
 {
-	
+
 		$('.btnColorVerde').click(function(){
 			if(salaLlena&&cocinaLlena&&habitacionLlena&&banoLleno)
 			{
@@ -493,12 +493,12 @@ function initializePaintControls()
 				showScene('mensajeError');
 			}
 		});
-	
+
 }
 
 function initializeWindowControls()
 {
-	
+
 		$('.btnVentana1').click(function(){
 			if(salaLlena&&cocinaLlena&&habitacionLlena&&banoLleno)
 			{
@@ -559,12 +559,12 @@ function initializeWindowControls()
 				showScene('mensajeError');
 			}
 		});
-	
+
 }
 
 function initializeRoofControls()
 {
-	
+
 		$('.btnTecho1').click(function(){
 			if(salaLlena&&cocinaLlena&&habitacionLlena&&banoLleno)
 			{
@@ -607,12 +607,12 @@ function initializeRoofControls()
 				showScene('mensajeError');
 			}
 		});
-	
+
 }
 
 function initializeServiceControls()
 {
-	
+
 		$('.btnServicio1').click(function(){
 			if(salaLlena&&cocinaLlena&&habitacionLlena&&banoLleno)
 			{
@@ -623,7 +623,7 @@ function initializeServiceControls()
 				$('#tv1').show();
 				$('#tv2').show();
 				luzLlena =true;
-				
+
 				showScene('mensajeLuz');
 				validarFinJuego();
 			}
@@ -662,7 +662,7 @@ function initializeServiceControls()
 				showScene('mensajeError');
 			}
 		});
-	
+
 }
 
 function initializeDragNDrop()
@@ -816,7 +816,7 @@ function validarFinJuego()
 
 		$("#nivel").removeClass().addClass("iconControlSupIzq nivel6");
 		$("#nivel").show();
-	
+
 	}
 }
 
@@ -915,7 +915,7 @@ function fordward()
 			$("#tiempo").show();
 			$("#nivel").removeClass().addClass("iconControlSupIzq nivel1");
 			$("#nivel").show();
-			
+
 			$("#region").show();
 			break;
         case "9":
@@ -1185,4 +1185,12 @@ function InvervalTimer(callback, interval) {
 	startTime = new Date();
 	timerId = window.setInterval(callback, interval);
 	state = 1;
+}
+function mostrarDiv(identificador){
+	$('#andinaMap').addClass('hidden');
+	$('#caribeMap').addClass('hidden');
+	$('#pacificaMap').addClass('hidden');
+	$('#orinoquiaMap').addClass('hidden');
+	$('#amazoniaMap').addClass('hidden');
+	$(identificador).removeClass('hidden');
 }
