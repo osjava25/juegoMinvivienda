@@ -251,6 +251,24 @@ function initialize()
 		elementosSiempreVisibles='casa,menuLateral,tiempo,nivel,region,'+cssRegion;
 
 	})
+	
+	$('.iconSiguiente').click(function(){
+		
+		if(habitacionLlena==true && banoLleno==true && cocinaLlena==true && salaLlena==true && ventanaLlena==true && techoLleno==true && pinturaLlena==true && luzLlena==true&& aguaLlena==true&&servicioLleno==true)
+		{
+			//alert('Juego terminado.')
+			timerX.pause();
+			showScene('mensajeFelicitacion');
+
+			$("#nivel").removeClass().addClass("iconControlSupIzq nivel6");
+			$("#nivel").show();
+		
+		}
+		else
+		{
+			showScene('mensajeError');
+		}
+	})
 
 	$('.btnJugar3').click(function(){
 		showScene('casa,menuLateral,tiempo,nivel,region,'+cssRegion);
