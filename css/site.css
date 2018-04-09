@@ -23,7 +23,7 @@ font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 .controlHeader{ padding: 10px; height: 54px; position: absolute; top: 10px; left: 0; width: 100%; }
 .leftControlSup{ float: left; width: 40%; }
 .rightControlSup{ float:right; width: 40%; text-align: right; }
-#seguir, #salir, #reiniciar{ cursor: hand; cursor: pointer; }
+#seguir, #salir, #reiniciar, .regionMapa{ cursor: hand; cursor: pointer; }
 .iconControlSup{ width: 33px; height: 33px; display: inline-block; cursor: hand; cursor: pointer; }
 .iconControlSupIzq{ width: auto; height: 33px; display: inline-block; cursor: hand; cursor: pointer; float: left;}
 .pasos{ background: url("../images/controlesSup/boton-1-submenu-pasos.svg") no-repeat;}
@@ -468,3 +468,13 @@ background: url("../images/casa/servicios/servicio-publico-1-luz-lampara.svg") n
 .contentMarcoDiploma{ margin: 0 auto; font-size: 1.3em; line-height: 1.3em; color: #000;
 font-family: 'Gloria Hallelujah', cursive; width: 34%; padding-top: 10%; }
 .logoDiploma{ width: 200px; display: inline-block; position: absolute; top: 7%; left: 43%;}
+.regionAndinaHover{ width: 100px; height: 150px; z-index: 5; position: relative; top: -310px; left: 73px;
+background: url("../images/escena7/region-andina-over.svg") no-repeat; }
+.regionCaribeHover{ width: 187px; height: 114px; z-index: 6; position: relative; top: -374px; left: 39px;
+background: url("../images/escena7/region-caribe-over.svg") no-repeat; }
+.regionAmazoniaHover{ width: 204px; height: 160px; z-index: 8; position: relative; top: -210px; left: 71px;
+background: url("../images/escena7/region-amazonia-over.svg") no-repeat; }
+.regionPacificaHover{ width: 120px; height: 160px; z-index: 7; position: relative; top: -300px; left: 38px;
+background: url("../images/escena7/region-pacifica-over.svg") no-repeat; }
+.regionOrinoquiaHover{ width: 140px; height: 150px; z-index: 9; position: relative; top: -267px; left: 116px;
+background: url("../images/escena7/region-orinoquia-over.svg") no-repeat; }
