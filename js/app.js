@@ -247,14 +247,14 @@ function initialize()
 
 
 	$('.btnJugar2').click(function(){
-		showScene('casa,menuLateral,tiempo,nivel1,region,'+cssRegion);
-		elementosSiempreVisibles='casa,menuLateral,tiempo,nivel1,region,'+cssRegion;
+		showScene('casa,menuLateral,tiempo,nivel,region,'+cssRegion);
+		elementosSiempreVisibles='casa,menuLateral,tiempo,nivel,region,'+cssRegion;
 
 	})
 
 	$('.btnJugar3').click(function(){
-		showScene('casa,menuLateral,tiempo,nivel1,region,'+cssRegion);
-		elementosSiempreVisibles='casa,menuLateral,tiempo,nivel1,region,'+cssRegion;
+		showScene('casa,menuLateral,tiempo,nivel,region,'+cssRegion);
+		elementosSiempreVisibles='casa,menuLateral,tiempo,nivel,region,'+cssRegion;
 	})
 
 	$('.btnJugar4').click(function(){
