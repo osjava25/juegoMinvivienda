@@ -266,7 +266,7 @@ function initialize()
 		}
 		else
 		{
-			showScene('mensajeError');
+			showScene('mensajeFalta');
 		}
 	})
 
